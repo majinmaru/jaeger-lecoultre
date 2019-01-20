@@ -18,20 +18,20 @@
 		@include flexbox();
 		@include align-items(center);
 		.nav-logo {
-			width: 45%;
+			width: 50%;
 			img {
-				width: 27%;
+				width: 26%;
 			}
 		}
 		.nav-gnb {
-			width: 50%;
+			width: 45%;
 			@include flexbox();
 			@include justify-content(space-between);
 			.nav-gnb__tab {
 				text-decoration: none;
 				font-family: 'Libre Baskerville', serif;
 				color: $main-color1;
-				font-size: 0.75rem;
+				font-size: 0.7rem;
 				position: relative;
 				&:after {
 					content: '';
@@ -54,7 +54,7 @@
 		.nav-search {
 			width: 5%;
 			@include flexbox();
-			@include justify-content(center);
+			@include justify-content(flex-end);
 			@include align-items(center);
 			.nav-search__box {
 				display: none;

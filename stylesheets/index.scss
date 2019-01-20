@@ -5,7 +5,26 @@
 html {
 	font-size: 16px;
 }
-
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+/*animated scroll arrow animation*/
+@-webkit-keyframes scroll-down {
+  0%   { -webkit-transform:translate(0,-20px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,20px); opacity: 0; }
+}
+@-moz-keyframes scroll-down {
+  0%   { -moz-transform:translate(0,-20px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,20px); opacity: 0; }
+}
+@keyframes scroll-down {
+  0%   { transform:translate(0,-20px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,20px); opacity: 0; }
+}
 .slick-slider{
 	position:relative;
 	display:block;
@@ -83,7 +102,7 @@ html {
     position: absolute;
     width: 29.5%;
     left: 0;
-    bottom: 8rem;
+    bottom: 7rem;
     list-style: none;
     display: block;
     text-align: center;
@@ -231,12 +250,34 @@ html {
 					}
 				}								
 			}
+			.slide-num {
+				position: absolute;
+				color: $main-color2;
+				font-size: 0.8rem;
+				font-family: 'Poppins', sans-serif;
+				top: 42%;
+				right: 11%;
+				z-index: 1000;
+			}
+		}
+	}
+	.scroll-down {
+		position: absolute;
+		top: 30%;
+		right: 10%;		
+		@include animation(scroll-down 1.5s linear infinite);
+		.scroll-down-icon {
+			width: 1rem;
+			height: 1rem;
+			border-top: 1px solid $white;
+			border-right: 1px solid $white;
+			@include transform(rotate(135deg));
 		}
 	}
 	.main-content {
 		width: 100%;
 		.section {
-			margin-top: 7rem;
+			margin-top: 10rem;
 			@include box-sizing(border-box);
 			padding: 0 17%;
 			width: 100%;
