@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+html { font-size: 16px; }
+
+body { width: 100%; overflow-x: hidden; }
+
+.header .nav .nav-gnb .nav-gnb__tab:nth-of-type(2) { font-weight: bold; }
+
+/*animated appear animation*/
+@-webkit-keyframes appear { 0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; } }
+@-moz-keyframes appear { 0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; } }
+@keyframes appear { 0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; } }
+.container { width: 100%; position: relative; margin-top: -8rem; }
+.container .jumbotron { position: relative; width: 100%; height: 83vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; background-image: url("../../images/history/history-bg-blur.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center center; }
+.container .jumbotron .jumbotron-inner { margin-top: 4rem; width: 70%; height: 65%; border: 3px solid #041419; padding: 0 6.5%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; background-image: url("../../images/history/history-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center 80%; position: relative; }
+.container .jumbotron .jumbotron-inner .jumbotron-indicator { margin-top: -1.5rem; width: 8rem; height: 0.5rem; background-color: #041419; }
+.container .jumbotron .jumbotron-inner .jumbotron-title { margin-top: 1.3rem; font-family: 'Libre Baskerville', serif; font-size: 3rem; line-height: 4rem; word-break: keep-all; word-wrap: break-word; color: #041419; }
+.container .jumbotron .jumbotron-inner .jumbotron-subtitle { width: 20%; font-family: 'Nanum Gothic', sans-serif; word-break: keep-all; word-wrap: break-word; color: #041419; font-size: 0.7rem; line-height: 1.4rem; text-shadow: 0 0 10px #ffffff; position: absolute; right: 6%; }
+.container .jumbotron .jumbotron-num { position: absolute; font-family: 'Libre Baskerville', serif; font-size: 0.9rem; font-weight: bold; color: #041419; right: 10.3%; top: 53%; }
+.container .content { width: 100%; }
+.container .content .content-wrapper { width: 100%; padding: 0 13%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.container .content .content-wrapper .tab-list { width: 100%; margin-top: 6rem; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+.container .content .content-wrapper .tab-list .tab { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: calc(94% / 2); background-color: transparent; color: #9e987d; border: 1px solid #9e987d; margin-right: 3%; margin-top: 1rem; float: left; cursor: pointer; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.container .content .content-wrapper .tab-list .tab:hover { background-color: #9e987d; color: #041419; }
+.container .content .content-wrapper .tab-list .tab:nth-of-type(2) { margin-right: 0; }
+.container .content .content-wrapper .tab-list .tab.active { background-color: #9e987d; color: #041419; }
+.container .content .content-wrapper .tab-list .tab .tab__subtitle { font-family: 'Poppins', sans-serif; font-size: 0.6rem; text-align: center; margin-top: 0.85rem; }
+.container .content .content-wrapper .tab-list .tab .tab__title { font-family: 'Nanum Gothic', sans-serif; font-size: 0.8rem; font-weight: bold; line-height: 1.1rem; text-align: center; margin-top: 0.2rem; margin-bottom: 0.85rem; }
+.container .content .content-wrapper .tab-box { width: 100%; margin-top: 7rem; display: none; }
+.container .content .content-wrapper .tab-box.show { display: block; -webkit-animation: appear 0.5s ease; animation: appear 0.5s ease; }
+.container .content .content-wrapper .tab-box .tab-box__header { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; position: relative; }
+.container .content .content-wrapper .tab-box .tab-box__header .tab-box__subtitle { font-family: 'Poppins', sans-serif; font-size: 0.6rem; text-align: center; color: #9e987d; }
+.container .content .content-wrapper .tab-box .tab-box__header .tab-box__title { font-family: 'Nanum Gothic', sans-serif; font-size: 1.3rem; line-height: 1.7rem; text-align: center; margin-top: 0.4rem; position: relative; color: #041419; font-weight: bold; }
+.container .content .content-wrapper .tab-box .tab-box__header .tab-box__title:after { content: ''; width: 100%; position: absolute; height: 0.2rem; background-color: #9e987d; display: block; margin-top: 0.8rem; }
+.container .content .content-wrapper .tab-box .tab-box__header .tab-box__title-deco { width: 0.5rem; height: 0.5rem; border-radius: 0.5rem; border: 1px solid #9e987d; background-color: #041419; position: absolute; bottom: -1.2rem; }
+.container .content .content-wrapper .tab-box .tab-box__content { margin-top: 7rem; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 5%; margin-bottom: 4rem; }
+.container .content .content-wrapper .tab-box .tab-box__content .history-all { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.container .content .content-wrapper .tab-box .tab-box__content .history-all .history-all__image { width: 50%; overflow: hidden; }
+.container .content .content-wrapper .tab-box .tab-box__content .history-all .history-all__image img { width: 100%; }
+.container .content .content-wrapper .tab-box .tab-box__content .history-all .history-all__text { width: 50%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 7%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; }
+.container .content .content-wrapper .tab-box .tab-box__content .history-all .history-all__text .history-all__text-title { font-size: 1rem; font-weight: bold; font-family: 'Nanum Gothic', sans-serif; margin-bottom: 2rem; }
+.container .content .content-wrapper .tab-box .tab-box__content .history-all .history-all__text .history-all__text-content { font-size: 0.8rem; line-height: 1.6rem; font-family: 'Nanum Gothic', sans-serif; word-break: keep-all; word-wrap: break-word; }
+.container .content .content-wrapper .tab-box .tab-box__content .videobox { width: 100%; position: relative; padding-bottom: 56.25%; }
+.container .content .content-wrapper .tab-box .tab-box__content .videobox iframe { position: absolute; width: 100%; height: 100%; }
+.container .content .content-wrapper .gototop { padding: 0.8rem 4.5rem; font-size: 0.85rem; font-family: 'Nanum Gothic', sans-serif; border: 1px solid #9e987d; color: #9e987d; cursor: pointer; background-color: transparent; outline: none; }
+
+/*# sourceMappingURL=history.css.map */

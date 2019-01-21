@@ -19,8 +19,10 @@
 		@include align-items(center);
 		.nav-logo {
 			width: 50%;
-			img {
-				width: 26%;
+			a {
+				img {
+					width: 26%;
+				}
 			}
 		}
 		.nav-gnb {

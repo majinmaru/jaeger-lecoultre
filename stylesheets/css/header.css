@@ -5,7 +5,7 @@
 .header .mobile-menu { display: none; }
 .header .nav { width: 80%; height: 8rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
 .header .nav .nav-logo { width: 50%; }
-.header .nav .nav-logo img { width: 26%; }
+.header .nav .nav-logo a img { width: 26%; }
 .header .nav .nav-gnb { width: 45%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; justify-content: space-between; -ms-flex-pack: space-between; }
 .header .nav .nav-gnb .nav-gnb__tab { text-decoration: none; font-family: 'Libre Baskerville', serif; color: #041419; font-size: 0.7rem; position: relative; }
 .header .nav .nav-gnb .nav-gnb__tab:after { content: ''; width: 0; height: 3px; background-color: #041419; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; position: absolute; bottom: -0.5rem; left: 0; }

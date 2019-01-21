@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 .footer { margin-top: 8rem; width: 100%; background-color: #9e987d; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
-.footer .footer-wrapper { margin-top: 4.5rem; width: 100%; padding: 0 10%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.footer .footer-wrapper { margin-top: 4.5rem; width: 100%; padding: 0 13%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: -webkit-box; display: -ms-flexbox; display: flex; }
 .footer .footer-wrapper .footer-logo { width: 13%; margin-right: 10%; }
 .footer .footer-wrapper .footer-logo img { width: 100%; }
 .footer .footer-wrapper .footer-sitemap { margin-top: 1rem; width: 77%; display: -webkit-box; display: -ms-flexbox; display: flex; }

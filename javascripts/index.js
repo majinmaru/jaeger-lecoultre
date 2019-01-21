@@ -1,5 +1,6 @@
 $(document).ready(function(){
   
+  $(".nav-logo a").find('img').attr('src', 'images/common/fulllogo.svg');
   var slideWrapper = $(".main-slider");
   
   slideWrapper.slick({
