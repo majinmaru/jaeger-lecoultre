@@ -12,8 +12,21 @@ $(document).ready(function(){
     swipe:true,
     fade: true,
     zIndex: 1,
+    pauseOnHover: false,
+    pauseOnDotsHover: true
   });
   
+  function listAppear(){
+  	var sectionTwoTop = $(".two").offset().top;
+  	var reactToTop =  sectionTwoTop*0.8;
+  	var scrollTop = $(window).scrollTop(); 
+  	if(scrollTop > reactToTop) {
+			$(".service-list").addClass('appear');			
+		}	
+  }
+  $(window).scroll(function() {
+		listAppear();
+	});
    /*
   document.querySelectorAll('video').forEach(function(video) {
     video.play();

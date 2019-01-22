@@ -129,7 +129,7 @@ body {
 			@include flex-wrap(wrap);
 			@include box-sizing(border-box);
 			padding: 0 5%;
-			margin-top: 2rem;
+			margin-top: 5rem;
 			.watch-tab {
 				width: calc( 95.5% / 4);
 				height: 6rem;
@@ -315,7 +315,6 @@ body {
 					}
 				}
 				.watch-load {
-					margin-top: 1rem;
 					margin-bottom: 4rem;
 					width: 100%;
 					@include flexbox();
@@ -326,7 +325,7 @@ body {
 						@include flexbox();
 						@include flex-direction(column);
 						@include align-items(center);
-						margin-top: 3rem;
+						margin-top: 6rem;
 						&:nth-of-type(4n) {
 							margin-right: 0;
 						}
@@ -338,6 +337,7 @@ body {
 							@include justify-content(center);
 							@include align-items(center);
 							background-color: $main-color2-150;
+							border-top: 1px solid $main-color2;
 							&:hover {
 								img {
 									width: 68%;

@@ -27,7 +27,6 @@ $(document).ready(function(){
 	});
 	function imageAppear(){
 		var videoTop = $('.videobox').offset().top;
-		console.log(videoTop);
 		var scrollTop = $(window).scrollTop();
 		if(scrollTop > videoTop) {
 			$('.video-text-image').children('img').first().addClass('appear');
