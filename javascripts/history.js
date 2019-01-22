@@ -11,6 +11,10 @@ $(document).ready(function(){
 	});
 
 	$(".gototop").click(function(e){
-		$(window).scrollTop(HeaderTop);
+		e.preventDefault();
+		var tabTop = $(".content").offset().top;
+		$('body, html').animate({
+			scrollTop : tabTop
+		}, 800)
 	});
 });

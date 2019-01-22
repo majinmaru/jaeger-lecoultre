@@ -1,0 +1,105 @@
+@import 'base/color.scss';
+@import 'base/font.scss';
+@import 'base/mixin.scss';
+
+html {
+	font-size: 16px;
+}
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+.header {
+	.nav {
+		.nav-gnb {
+			.nav-gnb__tab:nth-of-type(5) {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.container {
+	width: 100%;
+	position: relative;
+	margin-top: -8rem;
+	.jumbotron {
+		position: relative;
+		width: 100%;
+		height: 83vh;
+		overflow: hidden;
+		@include flexbox();
+		@include justify-content(center);
+		@include align-items(center);
+		background-image: url('../../images/watches/product-bg.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		.jumbotron-inner {
+			margin-top: 4rem;
+			width: 70%;
+			height: 65%;
+			border: 3px solid $main-color1;
+			padding: 0 6.5%;
+			@include box-sizing(border-box);
+			@include flexbox();
+			@include flex-direction(column);
+			@include justify-content(center);
+			.jumbotron-indicator {
+				width: 8rem;
+				height: 0.5rem;
+				background-color: $main-color1;
+				margin-left: 65%;
+			}
+			.jumbotron-title {
+				margin-top: 1.3rem;
+				font-family: 'Libre Baskerville', serif;
+				font-size: 3rem;
+				line-height: 3.6rem;
+				word-break: keep-all;
+				word-wrap: break-word;
+				color: $main-color1;
+				margin-left: 65%;
+			}
+			.jumbotron-subtitle {
+				width: 23%;
+				margin-top: 1.5rem;
+				font-family: 'Nanum Gothic', sans-serif;
+				word-break: keep-all;
+				word-wrap: break-word;
+				color: $main-color1;
+				font-size: 0.7rem;
+				line-height: 1.4rem;
+				margin-left: 65%;
+			}
+		}
+		.jumbotron-benedict {
+			position: absolute;
+			left: 25%;
+			width: 23%;
+			bottom: -6%;
+			img {
+				width: 100%;
+			}
+		}
+		.jumbotron-num {
+			position: absolute;
+			font-family: 'Libre Baskerville', serif;
+			font-size: 0.9rem;
+			font-weight: bold;
+			color: $main-color1;
+			right: 10.3%;
+			top: 53%;
+		}
+	}
+	.content {
+		width: 100%;
+		.content-wrapper {
+			width: 100%;
+			padding: 0 13%;
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(center);
+			@include box-sizing(border-box);
+		}
+	}
+}

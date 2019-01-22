@@ -72,7 +72,7 @@ body {
 				margin-top: 1.3rem;
 				font-family: 'Libre Baskerville', serif;
 				font-size: 3rem;
-				line-height: 4rem;
+				line-height: 3.6rem;
 				word-break: keep-all;
 				word-wrap: break-word;
 				color: $main-color1;
@@ -174,14 +174,14 @@ body {
 					position: relative;
 					.tab-box__subtitle {
 						font-family: 'Poppins', sans-serif;						
-						font-size: 0.6rem;
+						font-size: 0.8rem;
 						text-align: center;
 						color: $main-color2;
 					}
 					.tab-box__title {
 						font-family: 'Nanum Gothic', sans-serif;						
-						font-size: 1.3rem;
-						line-height: 1.7rem;
+						font-size: 1.5rem;
+						line-height: 1.9rem;
 						text-align: center;
 						margin-top: 0.4rem;
 						position: relative;
@@ -218,9 +218,14 @@ body {
 						@include flexbox();
 						.history-all__image {
 							width: 50%;
+							height: 19vw;
+							@include flexbox();
+							@include justify-content(center);
 							overflow: hidden;
+							background-color: $main-color2;
 							img {
-								width: 100%;
+								height: 100%;
+								opacity: 0.85;
 							}
 						}
 						.history-all__text {
