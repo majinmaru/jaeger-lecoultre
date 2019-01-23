@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,900");
 .header { width: 100%; height: 8rem; background-color: transparent; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; z-index: 9000; position: relative; }
 .header .mobile-menu { display: none; }
 .header .nav { width: 80%; height: 8rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
-.header .nav .nav-logo { width: 50%; }
-.header .nav .nav-logo a img { width: 26%; }
+.header .nav .nav-logo { width: 12.5%; margin-right: 37.5%; }
+.header .nav .nav-logo a img { width: 100%; }
 .header .nav .nav-gnb { width: 45%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; justify-content: space-between; -ms-flex-pack: space-between; }
 .header .nav .nav-gnb .nav-gnb__tab { text-decoration: none; font-family: 'Libre Baskerville', serif; color: #041419; font-size: 0.7rem; position: relative; }
 .header .nav .nav-gnb .nav-gnb__tab:after { content: ''; width: 0; height: 3px; background-color: #041419; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; position: absolute; bottom: -0.5rem; left: 0; }
@@ -14,5 +14,20 @@
 .header .nav .nav-search .nav-search__box { display: none; background-color: #9e987d; color: #041419; font-size: 0.8rem; font-family: 'Nanum Gothic', sans-serif; height: 1rem; }
 .header .nav .nav-search .nav-search__icon { width: 2rem; height: 2rem; background-color: #9e987d; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; cursor: pointer; }
 .header .nav .nav-search .nav-search__icon img { width: 65%; }
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) { .header .nav .nav-logo { margin-right: 27.5%; }
+  .header .nav .nav-gnb { width: 55%; }
+  .header .nav .nav-gnb .nav-gnb__tab { font-size: 0.6rem; } }
+@media screen and (min-width: 811px) and (max-width: 1023px) { .header .nav .nav-logo { margin-right: 17.5%; }
+  .header .nav .nav-gnb { width: 65%; }
+  .header .nav .nav-gnb .nav-gnb__tab { font-size: 0.6rem; }
+  .header .nav .nav-search .nav-search__icon { width: 1.5rem; height: 1.5rem; } }
+@media screen and (min-width: 320px) and (max-width: 810px) { .header { height: 4rem; }
+  .header .nav { width: 100%; height: 100%; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; z-index: 9001; }
+  .header .nav .nav-logo { width: 60%; height: 3rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; margin-right: 0; }
+  .header .nav .nav-logo a img { width: unset; height: 90%; }
+  .header .nav .nav-gnb { display: none; }
+  .header .nav .nav-search { display: none; }
+  .header .mobile-menu { display: block; width: 2.5rem; height: 2.5rem; position: absolute; top: 0.75rem; right: 5%; } }
 
 /*# sourceMappingURL=header.css.map */

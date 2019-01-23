@@ -18,10 +18,11 @@
 		@include flexbox();
 		@include align-items(center);
 		.nav-logo {
-			width: 50%;
+			width: 12.5%;
+			margin-right: 37.5%;
 			a {
 				img {
-					width: 26%;
+					width: 100%;
 				}
 			}
 		}
@@ -78,6 +79,83 @@
 					width: 65%;
 				}
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px){
+	.header {
+		.nav {
+			.nav-logo {
+				margin-right: 27.5%;
+			}
+			.nav-gnb {
+				width: 55%;
+				.nav-gnb__tab {
+					font-size: 0.6rem;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 811px) and (max-width: 1023px){
+	.header {
+		.nav {
+			.nav-logo {
+				margin-right: 17.5%;
+			}
+			.nav-gnb {
+				width: 65%;
+				.nav-gnb__tab {
+					font-size: 0.6rem;
+				}
+			}
+			.nav-search {
+				.nav-search__icon {
+					width: 1.5rem;
+					height: 1.5rem;
+				}
+			}
+		}
+	}
+}
+//smartphone
+@media screen and (min-width: 320px) and (max-width: 810px) {
+	.header {
+		height: 4rem;
+		.nav {
+			width: 100%;
+			height: 100%;
+			@include justify-content(center);
+			z-index: 9001;
+			.nav-logo {	
+				width: 60%;
+				height: 3rem;
+				@include flexbox();
+				@include justify-content(center);
+				@include align-items(center);
+				margin-right: 0;
+				a {
+					img {
+						width: unset;
+						height: 90%;
+					}
+				}
+			}
+			.nav-gnb {
+				display: none;
+			}
+			.nav-search {
+				display: none;				
+			}
+		}
+		.mobile-menu {
+			display: block;
+			width: 2.5rem;
+			height: 2.5rem;
+			position: absolute;
+			top: 0.75rem;
+			right: 5%;
 		}
 	}
 }

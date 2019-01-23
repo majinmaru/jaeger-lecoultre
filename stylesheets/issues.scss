@@ -30,21 +30,23 @@ body {
 		@include flexbox();
 		@include justify-content(center);
 		@include align-items(center);
-
+		background-color: $main-color2;
 		.jumbotron-inner {
 			margin-top: 4rem;
 			width: 70%;
 			height: 65%;
 			border: 3px solid $main-color1;
 			padding: 0 6.5%;
+			background-color: $main-color1;
 			@include box-sizing(border-box);
 			@include flexbox();
 			@include flex-direction(column);
 			@include justify-content(center);
+			position: relative;
 			.jumbotron-indicator {
 				width: 8rem;
 				height: 0.5rem;
-				background-color: $main-color1;
+				background-color: $main-color2;
 			}
 			.jumbotron-title {
 				margin-top: 1.3rem;
@@ -53,7 +55,7 @@ body {
 				line-height: 3.6rem;
 				word-break: keep-all;
 				word-wrap: break-word;
-				color: $main-color1;
+				color: $main-color2;
 			}
 			.jumbotron-subtitle {
 				width: 23%;
@@ -61,9 +63,32 @@ body {
 				font-family: 'Nanum Gothic', sans-serif;
 				word-break: keep-all;
 				word-wrap: break-word;
-				color: $main-color1;
+				color: $main-color2;
 				font-size: 0.7rem;
 				line-height: 1.4rem;
+			}
+			.jumbotron-images {
+				width: 70%;
+				height: 100%;
+				position: absolute;
+				right: 0;
+				overflow: hidden;
+				.images-text {
+					font-family: 'Poppins', sans-serif;
+					font-weight: 900;
+					width: 100%;
+					text-align: center;
+					color: $main-color2-150;
+					font-size: 8rem;
+					line-height: 8rem;
+					margin-top: 1rem;
+				}
+				img {
+					width: 40%;
+					position: absolute;
+					top: 12%;
+					left: 29.5%;
+				}
 			}
 		}		
 		.jumbotron-num {
