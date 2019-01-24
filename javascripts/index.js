@@ -12,8 +12,7 @@ $(document).ready(function(){
     swipe:true,
     fade: true,
     zIndex: 1,
-    pauseOnHover: false,
-    pauseOnDotsHover: true
+    pauseOnHover: false
   });
   
   function listAppear(){
