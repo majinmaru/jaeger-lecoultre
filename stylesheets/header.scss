@@ -131,14 +131,16 @@
 			.nav-logo {	
 				width: 60%;
 				height: 3rem;
-				@include flexbox();
-				@include justify-content(center);
-				@include align-items(center);
 				margin-right: 0;
+				@include flexbox();
+				@include align-items(center);
 				a {
+					width: 100%;
+					@include flexbox();
+					@include justify-content(center);
+					@include align-items(center);
 					img {
-						width: unset;
-						height: 90%;
+						width: 50%;
 					}
 				}
 			}
@@ -156,6 +158,7 @@
 			position: absolute;
 			top: 0.75rem;
 			right: 5%;
+			background-color: $main-color2;
 		}
 	}
 }
