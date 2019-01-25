@@ -69,6 +69,18 @@ body {
   100% { transform:translateY(0); opacity: 1;}
 }
 
+@-webkit-keyframes stretch-one {
+  0%   { height: 4rem; background-color: transparent;}
+  100% { height: 100vh; background-color: $main-color1; }
+}
+@-moz-keyframes stretch-one {
+  0%   { height: 4rem; background-color: transparent;}
+  100% { height: 100vh; background-color: $main-color1; }
+}
+@keyframes stretch-one {
+  0%   { height: 4rem; background-color: transparent;}
+  100% { height: 100vh; background-color: $main-color1; }
+}
 .slick-slider{
 	position:relative;
 	display:block;
@@ -212,6 +224,35 @@ body {
 					background-color: $main-color2;
 				}
 			}
+		}
+		&.mobile {
+			@include animation(stretch-one 0.5s ease);
+			background-color: $main-color1;
+			.nav-search {
+				border: 1px solid $main-color2;
+				.nav-search__box {
+					&::-webkit-input-placeholder {
+					    color: $main-color2;
+					}
+					&:-moz-placeholder {
+					   color: $main-color2;							   
+					}
+					&::-moz-placeholder { 
+					   color: $main-color2;
+					}
+					&:-ms-input-placeholder {
+					   color:  $main-color2;
+					}
+					&::placeholder {
+					   color: $main-color2;
+					}
+				}
+			}
+		}
+	}
+	.mobile-menu {
+		.mobile-menu-line {
+			background-color: $main-color2;
 		}
 	}
 }
@@ -713,6 +754,9 @@ body {
 						font-size: 0.8rem;
 						padding: 0.8rem 3.5rem;
 						cursor: pointer;
+						text-align: center;
+						word-break: keep-all;
+						word-wrap: break-word;
 						@include transition(all 0.5s ease);
 						&:hover {
 							color: $main-color1;
@@ -799,11 +843,130 @@ body {
 			}
 		}
 		.scroll-down {
-			top: 34%;
+			top: 29%;
 			right: 47%;
 			.scroll-down-icon {
 				border-top: 1px solid $main-color1;
 				border-right: 1px solid $main-color1;
+			}
+		}
+		.main-content {
+			.section {
+				padding: 0 5%;
+				.section-wrapper {
+					.section-content {
+						.introduce {
+							position: relative;
+							.introduce-left {
+								width: 65%;
+								height: 102vw;
+							}
+							.introduce-right {
+								width: 100%;
+								position: absolute;
+								top: 0;
+								.big-watch-content {
+									width: 40%;
+									height: 82vw;
+									margin-left: 60%;
+									.big-watch-indicator {
+										margin-left: -2rem;
+										width: 70%;
+									}
+									.big-watch-text {
+										margin-top: 3rem;
+										@include flex-direction(column);
+										.big-watch-text__title {
+											width: 100%;
+										}
+										.big-watch-text__desc {
+											width: 100%;
+											margin-top: 2rem;
+										}
+									}
+									.big-watch-detail {
+										margin-top: 5rem;
+										.big-watch-detail__arrow {
+											right: 31%;
+										}
+										.big-watch-detail__arrow-icon {}
+									}
+								}
+								.watch-list {
+									margin-top: 8%;
+									.watch {
+										max-height: unset;
+										height: 42vw;
+										.watch-title {
+											width: 100%;
+											margin-left: 0;
+											font-size: 0.8rem;
+											top: 52%;
+										}
+										.watch-detail {
+											top: 80%;
+										}
+									}
+								}
+							}
+						}
+					}					
+				}
+				&.two {
+					margin-top: 16rem;
+					.section-wrapper {
+						.section-content {
+							.service-wrapper {
+								.service-center {
+									width: 100%;
+									height: 60vw;
+									.service-center-find {
+										width: 50%;
+										height: 100%;
+										padding-top: 18%;
+										bottom: 0;
+										.service-center-find__arrow {
+											width: 1.5rem;
+											height: 1.5rem;
+											&:after {
+												width: 0.5rem;
+												height: 0.5rem;
+												top: 33%;
+												left: 27%;
+											}
+										}
+										.service-center-find__title {
+											font-size: 1rem;
+											margin-top: 0.8rem;
+										}
+										.service-center-find__subtitle {
+											margin-top: 0.7rem;
+										}
+									}
+								}
+								.service-list {
+									width: 100%;
+									height: 11rem;
+									position: relative;
+									.service-list-wrapper {
+										width: 100%;
+										height: 100%;
+										margin-left: 0;
+										.service-tab{
+											padding: 0 5%;
+											@include box-sizing(border-box);
+											.service-title {
+											}
+											.service-arrow {
+												right: 5%;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

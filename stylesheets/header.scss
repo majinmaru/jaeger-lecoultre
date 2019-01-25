@@ -1,6 +1,58 @@
 @import 'base/color.scss';
 @import 'base/font.scss';
 @import 'base/mixin.scss';
+
+@-webkit-keyframes stretch {
+  0%   { height: 4rem; background-color: transparent;}
+  100% { height: 100vh; background-color: $main-color2; }
+}
+@-moz-keyframes stretch {
+  0%   { height: 4rem; background-color: transparent;}
+  100% { height: 100vh; background-color: $main-color2; }
+}
+@keyframes stretch {
+  0%   { height: 4rem; background-color: transparent;}
+  100% { height: 100vh; background-color: $main-color2; }
+}
+
+@-webkit-keyframes close-one {
+  0%   { @include transform(rotate(0));}
+  100% { @include transform(rotate(45deg)); position: absolute;}
+}
+@-moz-keyframes close-one {
+  0%   { @include transform(rotate(0));}
+  100% { @include transform(rotate(45deg)); position: absolute;}
+}
+@keyframes close-one {
+  0%   { @include transform(rotate(0));}
+  100% { @include transform(rotate(45deg)); position: absolute;}
+}
+////
+@-webkit-keyframes close-two {
+  0%   { width:80%; opacity: 1;}
+  100% { width: 100%; opacity: 0;}
+}
+@-moz-keyframes close-two {
+  0%   { width:80%; opacity: 1;}
+  100% { width: 100%; opacity: 0;}
+}
+@keyframes close-two {
+  0%   { width:80%; opacity: 1;}
+  100% { width: 100%; opacity: 0;}
+}
+////
+@-webkit-keyframes close-three {
+  0%   { width: 60%; @include transform(rotate(0));}
+  100% { width: 100%; @include transform(rotate(-45deg)); position: absolute;}
+}
+@-moz-keyframes close-three {
+  0%   { width: 60%; @include transform(rotate(0));}
+  100% { width: 100%; @include transform(rotate(-45deg)); position: absolute;}
+}
+@keyframes close-three {
+  0%   { width: 60%; @include transform(rotate(0));}
+  100% { width: 100%; @include transform(rotate(-45deg)); position: absolute;}
+}
 .header {
 	width: 100%;
 	height: 8rem;
@@ -66,6 +118,8 @@
 				font-size: 0.8rem;
 				font-family: 'Nanum Gothic', sans-serif;
 				height: 1rem;
+				border: none;
+				outline: none;			
 			}
 			.nav-search__icon {
 				width: 2rem;
@@ -126,12 +180,16 @@
 		.nav {
 			width: 100%;
 			height: 100%;
-			@include justify-content(center);
+			@include flex-direction(column);
 			z-index: 9001;
+			@include transform-origin(center top);
+			@include transition(all 0.5s ease);
 			.nav-logo {	
-				width: 60%;
+				width: 65%;
 				height: 3rem;
 				margin-right: 0;
+				position: absolute;
+				margin-top: 0.5rem;
 				@include flexbox();
 				@include align-items(center);
 				a {
@@ -146,19 +204,108 @@
 			}
 			.nav-gnb {
 				display: none;
+				width: 100%;
+				margin-top: 36%;
+				@include flex-direction(column);
+				@include align-items(center);
 			}
 			.nav-search {
 				display: none;				
 			}
+			&.mobile {
+				@include animation(stretch 0.5s ease);
+				height: 100vh;
+				background-color: $main-color2;
+				.nav-gnb {
+					@include flexbox();
+					.nav-gnb__tab {
+						margin: 1.5rem 0;
+						font-size: 0.7rem;
+					}
+				}
+				.nav-search {
+					width: 75%;
+					@include flexbox();
+					@include justify-content(flex-end);
+					height: 2rem;
+					border: 1px solid $main-color1;
+					margin-top: 2rem;
+					.nav-search__box {
+						display: block;
+						width: 88%;
+						background-color: transparent;
+						@include box-sizing(border-box);
+						padding-left: 5%;
+						&::-webkit-input-placeholder {
+						    color: $main-color1;
+						}
+						&:-moz-placeholder {
+						   color: $main-color1;							   
+						}
+						&::-moz-placeholder { 
+						   color: $main-color1;
+						}
+						&:-ms-input-placeholder {
+						   color:  $main-color1;
+						}
+						&::placeholder {
+						   color: $main-color1;
+						}
+					}
+					.nav-search__icon {
+						width: 12%;						
+					}
+				}
+			}
 		}
 		.mobile-menu {
-			display: block;
+			z-index: 9002;
 			width: 2.5rem;
 			height: 2.5rem;
 			position: absolute;
 			top: 0.75rem;
 			right: 5%;
-			background-color: $main-color2;
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(flex-end);
+			@include justify-content(center);
+			.mobile-menu-line {
+				z-index: 9002;
+				width: 100%;
+				height: 3px;
+				background-color: $main-color1;
+				margin-top: 0.5rem;
+				@include transition(all 0.5s ease);
+				&.width {
+					&:nth-of-type(1) {
+						@include animation(close-one 0.5s ease);
+						@include transform(rotate(45deg));
+						position: absolute;
+						top: 50%;
+					}
+					&:nth-of-type(2) {
+						@include animation(close-two 0.5s ease);
+						width: 100%;
+						opacity: 0;
+					}
+					&:nth-of-type(3) {
+						width: 100%;
+						@include animation(close-three 0.5s ease);
+						@include transform(rotate(-45deg));
+						position: absolute;
+						top: 32%;
+					}
+				}
+				&:nth-of-type(1) {
+					margin-top: 0;
+				}
+				&:nth-of-type(2) {
+					width: 80%;
+				}
+				&:nth-of-type(3) {
+					width: 60%;
+				}
+			}
 		}
 	}
 }

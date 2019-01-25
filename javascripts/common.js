@@ -1,3 +1,19 @@
 $(document).ready(function(){
-	
+	$(".mobile-menu").click(function(e){
+		e.preventDefault();
+		$(".mobile-menu-line").toggleClass('width');
+		$(".nav").toggleClass('mobile');
+	});
+	/*
+	function closeMenu(){
+		if($(".nav").hasClass('mobile')){
+			$(".mobile-menu").click(function(e){
+				e.preventDefault();
+				$(".mobile-menu-line").removeClass('width');
+				$(".nav").removeClass('mobile');
+			});
+		}
+	}
+	closeMenu();
+	*/
 });

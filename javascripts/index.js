@@ -3,7 +3,6 @@ $(document).ready(function(){
   function imageSetting() {
     var windowWidth = $(window).width();
     var mainSliderItem = $(".main-slider").find(".item");
-    console.log(mainSliderItem.eq(0));
     if(windowWidth < 811) {
       $(mainSliderItem).eq(0).prepend('<div class="slider-image"><img src="images/index/mobile/slide-0.jpg"/></div>');
       $(mainSliderItem).eq(1).prepend('<div class="slider-image"><img src="images/index/mobile/slide-1.jpg"/></div>');
