@@ -31,7 +31,9 @@ body {
 		@include flexbox();
 		@include justify-content(center);
 		@include align-items(center);
-		background-color: $main-color2;
+		background-image: url('../../images/boutiques/boutique-1.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
 		.jumbotron-inner {
 			margin-top: 4rem;
 			width: 70%;
@@ -44,9 +46,10 @@ body {
 			@include justify-content(center);
 			position: relative;
 			.jumbotron-indicator {
-				width: 8rem;
+				width: 14rem;
 				height: 0.5rem;
 				background-color: $main-color1;
+				margin-left: -19%;
 			}
 			.jumbotron-title {
 				margin-top: 1.3rem;
@@ -71,7 +74,7 @@ body {
 				width: 55%;
 				height: 80%;
 				position: absolute;
-				top: 14%;
+				top: 10%;
 				right: 5%;
 				overflow: hidden;
 				img {

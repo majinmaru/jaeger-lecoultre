@@ -64,9 +64,10 @@ body {
 			position: relative;
 			.jumbotron-indicator {
 				margin-top: -1.5rem;
-				width: 8rem;
+				width: 14rem;
 				height: 0.5rem;
 				background-color: $main-color1;
+				margin-left: -19%;
 			}
 			.jumbotron-title {
 				margin-top: 1.3rem;
@@ -111,8 +112,10 @@ body {
 			@include align-items(center);
 			@include box-sizing(border-box);
 			.tab-list {
-				width: 100%;
+				width: 40%;
 				margin-top: 6rem;
+				padding: 0 3%;
+				@include box-sizing(border-box);
 				@include flexbox();
 				@include flex-wrap(wrap);
 				.tab {
@@ -120,26 +123,66 @@ body {
 					@include flex-direction(column);
 					@include align-items(center);
 					@include box-sizing(border-box);
-					width: calc(94% / 2);
-					background-color: transparent;
-					color: $main-color2;
-					border: 1px solid $main-color2;
-					margin-right: 3%;
+					position: relative;
+					width: calc(100% / 2);
+					background-color: $white;
+					color: $main-color2;					
+					border-right: 1px solid $main-color2;					
 					margin-top: 1rem;
-					float: left;
 					cursor: pointer;
 					@include transition(all 0.5s ease);
+					&:nth-of-type(1) {
+						border-left: 1px solid $main-color2;
+					}	
 					&:hover {
-						background-color: $main-color2;
-						color: $main-color1;
-					}
-					
-					&:nth-of-type(2) {
-						margin-right: 0;
+						color: $main-color1;						
+						.tab__icon {
+							.tab-icon {
+								opacity: 0;
+							}
+							.tab-icon-active {
+								opacity: 1;
+							}
+						}
 					}
 					&.active {
-						background-color: $main-color2;
-						color: $main-color1;
+						.tab__active-bar {
+							opacity: 1;
+						}
+						.tab__icon {
+							.tab-icon {
+								opacity: 0;
+							}
+							.tab-icon-active {
+								opacity: 1;
+							}
+						}
+					}
+					.tab__active-bar {
+						position: absolute;
+						top: 0;
+						width: 100%;
+						height: 0.5rem;
+						background-color: $main-color1;
+						opacity: 0;
+						@include transition(all 0.5s ease);
+					}
+					.tab__icon {
+						margin-top: 2rem;
+						width: 20%;
+						position: relative;
+						.tab-icon {
+							width: 100%;
+							opacity: 1;
+							@include transition(all 0.5s ease);
+						}
+						.tab-icon-active {
+							width: 100%;
+							position: absolute;
+							top: 0;
+							opacity: 0;
+							@include transition(all 0.5s ease);
+						}
 					}
 					.tab__subtitle {
 						font-family: 'Poppins', sans-serif;						

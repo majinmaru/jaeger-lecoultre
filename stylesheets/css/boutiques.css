@@ -8,12 +8,12 @@ body { width: 100%; overflow-x: hidden; }
 .header .nav .nav-gnb .nav-gnb__tab:nth-of-type(5) { font-weight: bold; }
 
 .container { width: 100%; position: relative; margin-top: -8rem; }
-.container .jumbotron { position: relative; width: 100%; height: 83vh; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; background-color: #9e987d; }
+.container .jumbotron { position: relative; width: 100%; height: 83vh; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; background-image: url("../../images/boutiques/boutique-1.jpg"); background-size: cover; background-repeat: no-repeat; }
 .container .jumbotron .jumbotron-inner { margin-top: 4rem; width: 70%; height: 65%; border: 3px solid #041419; padding: 0 6.5%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; position: relative; }
-.container .jumbotron .jumbotron-inner .jumbotron-indicator { width: 8rem; height: 0.5rem; background-color: #041419; }
+.container .jumbotron .jumbotron-inner .jumbotron-indicator { width: 14rem; height: 0.5rem; background-color: #041419; margin-left: -19%; }
 .container .jumbotron .jumbotron-inner .jumbotron-title { margin-top: 1.3rem; font-family: 'Libre Baskerville', serif; font-size: 3rem; line-height: 3.6rem; word-break: keep-all; word-wrap: break-word; color: #041419; }
 .container .jumbotron .jumbotron-inner .jumbotron-subtitle { width: 23%; margin-top: 1.5rem; font-family: 'Nanum Gothic', sans-serif; word-break: keep-all; word-wrap: break-word; color: #041419; font-size: 0.7rem; line-height: 1.4rem; }
-.container .jumbotron .jumbotron-inner .jumbotron-inner-image { width: 55%; height: 80%; position: absolute; top: 14%; right: 5%; overflow: hidden; }
+.container .jumbotron .jumbotron-inner .jumbotron-inner-image { width: 55%; height: 80%; position: absolute; top: 10%; right: 5%; overflow: hidden; }
 .container .jumbotron .jumbotron-inner .jumbotron-inner-image img { width: 100%; }
 .container .jumbotron .jumbotron-num { position: absolute; font-family: 'Libre Baskerville', serif; font-size: 0.9rem; font-weight: bold; color: #041419; right: 10.3%; top: 53%; }
 .container .content { width: 100%; }

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700,900");
 html { font-size: 16px; }
 
 body { width: 100%; overflow-x: hidden; }
@@ -14,13 +14,14 @@ body { width: 100%; overflow-x: hidden; }
 @keyframes appear { 0% { transform: translateY(20px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; } }
 .container { width: 100%; position: relative; margin-top: -8rem; }
-.container .jumbotron { position: relative; width: 100%; height: 83vh; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; background-image: url("../../images/watches/product-bg.png"); background-repeat: no-repeat; background-size: cover; }
-.container .jumbotron .jumbotron-inner { margin-top: 4rem; width: 70%; height: 65%; border: 3px solid #041419; padding: 0 6.5%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; }
-.container .jumbotron .jumbotron-inner .jumbotron-indicator { width: 8rem; height: 0.5rem; background-color: #041419; margin-left: 65%; }
-.container .jumbotron .jumbotron-inner .jumbotron-title { margin-top: 1.3rem; font-family: 'Libre Baskerville', serif; font-size: 3rem; line-height: 3.6rem; word-break: keep-all; word-wrap: break-word; color: #041419; margin-left: 65%; }
-.container .jumbotron .jumbotron-inner .jumbotron-subtitle { width: 23%; margin-top: 1.5rem; font-family: 'Nanum Gothic', sans-serif; word-break: keep-all; word-wrap: break-word; color: #041419; font-size: 0.7rem; line-height: 1.4rem; margin-left: 65%; }
-.container .jumbotron .jumbotron-benedict { position: absolute; left: 25%; width: 23%; bottom: -6%; }
-.container .jumbotron .jumbotron-benedict img { width: 100%; }
+.container .jumbotron { position: relative; width: 100%; height: 83vh; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; background-image: url("../../images/watches/product-bg.png"), linear-gradient(180deg, rgba(128, 128, 128, 0) 0%, rgba(128, 128, 128, 0.2) 100%); background-repeat: no-repeat; background-size: cover; }
+.container .jumbotron .jumbotron-inner { margin-top: 4rem; width: 70%; height: 65%; border: 3px solid #041419; padding: 0 6.5%; background-color: #041419; overflow: hidden; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; }
+.container .jumbotron .jumbotron-inner .jumbotron-indicator { width: 13rem; height: 0.5rem; background-color: #9e987d; margin-left: 50%; }
+.container .jumbotron .jumbotron-inner .jumbotron-title { margin-top: 1.3rem; font-family: 'Libre Baskerville', serif; font-size: 3rem; line-height: 3.6rem; word-break: keep-all; word-wrap: break-word; color: #9e987d; margin-left: 65%; }
+.container .jumbotron .jumbotron-inner .jumbotron-subtitle { width: 23%; margin-top: 1.5rem; font-family: 'Nanum Gothic', sans-serif; word-break: keep-all; word-wrap: break-word; color: #9e987d; font-size: 0.7rem; line-height: 1.4rem; margin-left: 65%; }
+.container .jumbotron .jumbotron-inner .jumbotron-benedict { position: absolute; left: 15%; width: 32%; bottom: -27%; }
+.container .jumbotron .jumbotron-inner .jumbotron-benedict img { width: 100%; }
+.container .jumbotron .jumbotron-box { width: 21%; height: 16%; border: 2px solid #9e987d; background-color: transparent; position: absolute; left: 32%; top: 61%; }
 .container .jumbotron .jumbotron-num { position: absolute; font-family: 'Libre Baskerville', serif; font-size: 0.9rem; font-weight: bold; color: #041419; right: 10.3%; top: 53%; }
 .container .content { width: 100%; }
 .container .content .content-wrapper { width: 100%; padding: 0 13%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }

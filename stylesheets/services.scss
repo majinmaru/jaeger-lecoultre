@@ -48,9 +48,11 @@ body {
 			@include flex-direction(column);
 			@include justify-content(center);
 			.jumbotron-indicator {
-				width: 8rem;
+				width: 14rem;
 				height: 0.5rem;
 				background-color: $main-color1;
+				margin-left: -19%;
+				z-index: 5;
 			}
 			.jumbotron-title {
 				margin-top: 1.3rem;
@@ -60,6 +62,7 @@ body {
 				word-break: keep-all;
 				word-wrap: break-word;
 				color: $main-color1;
+				z-index: 5;
 			}
 			.jumbotron-subtitle {
 				width: 23%;
@@ -70,17 +73,20 @@ body {
 				color: $main-color1;
 				font-size: 0.7rem;
 				line-height: 1.4rem;
+				z-index: 5;
 			}
 			.jumbotron-inner-image {
-				width: 61%;
-				height: 100%;
+				width: 60%;
+				height: 80%;
 				position: absolute;
-				top: 0;
-				right: 0;
+				top: 12%;
+				right: 5%;
 				overflow: hidden;
 				img {
 					width: 100%;
-					@include transform(translateY(-20%));
+					position: absolute;
+					right: 0;
+					bottom: 5%;
 				}
 			}
 		}		
@@ -149,7 +155,7 @@ body {
 				}
 			}
 			.services__desc {
-				width: 45%;
+				width: 50%;
 				text-align: center;
 				font-size: 0.7rem;
 				line-height: 1.4rem;

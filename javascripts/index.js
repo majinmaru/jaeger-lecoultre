@@ -1,5 +1,21 @@
 $(document).ready(function(){
   
+  function imageSetting() {
+    var windowWidth = $(window).width();
+    var mainSliderItem = $(".main-slider").find(".item");
+    console.log(mainSliderItem.eq(0));
+    if(windowWidth < 811) {
+      $(mainSliderItem).eq(0).prepend('<div class="slider-image"><img src="images/index/mobile/slide-0.jpg"/></div>');
+      $(mainSliderItem).eq(1).prepend('<div class="slider-image"><img src="images/index/mobile/slide-1.jpg"/></div>');
+      $(mainSliderItem).eq(2).prepend('<div class="slider-image"><img src="images/index/mobile/slide-2.jpg"/></div>');
+      $(mainSliderItem).eq(3).prepend('<div class="slider-image"><img src="images/index/mobile/slide-3.jpg"/></div>');
+      $(mainSliderItem).eq(4).prepend('<div class="slider-image"><img src="images/index/mobile/slide-4.jpg"/></div>');
+      $(mainSliderItem).eq(5).prepend('<div class="slider-image"><img src="images/index/mobile/slide-5.jpg"/></div>');
+      $(mainSliderItem).eq(6).prepend('<div class="slider-image"><img src="images/index/mobile/slide-6.jpg"/></div>');
+    }
+  }
+  imageSetting();
+
   $(".nav-logo a").find('img').attr('src', 'images/common/fulllogo.svg');
   var slideWrapper = $(".main-slider");
   
@@ -26,6 +42,9 @@ $(document).ready(function(){
   $(window).scroll(function() {
 		listAppear();
 	});
+  $(window).resize(function() {
+    imageSetting();
+  })
    /*
   document.querySelectorAll('video').forEach(function(video) {
     video.play();

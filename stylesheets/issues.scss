@@ -74,9 +74,10 @@ body {
 			@include justify-content(center);
 			position: relative;
 			.jumbotron-indicator {
-				width: 8rem;
+				width: 14rem;
 				height: 0.5rem;
 				background-color: $main-color2;
+				margin-left: -19%;
 			}
 			.jumbotron-title {
 				margin-top: 1.3rem;
