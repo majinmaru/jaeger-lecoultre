@@ -20,7 +20,6 @@ $(document).ready(function(){
       speed:500,
       arrows:false,
       dots: true,
-      swipe:true,
       fade: true,
       zIndex: 1,
       pauseOnHover: false
@@ -34,7 +33,6 @@ $(document).ready(function(){
     speed:500,
     arrows:false,
     dots: true,
-    swipe:true,
     fade: true,
     zIndex: 1,
     pauseOnHover: false
