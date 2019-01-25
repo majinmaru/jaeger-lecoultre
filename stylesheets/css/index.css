@@ -177,7 +177,7 @@ body { width: 100%; overflow-x: hidden; }
   .main .main-slider .item .content .content-wrapper .content-title { text-align: left; margin-top: 0.7rem; }
   .main .main-slider .item .content .content-wrapper .content-subtitle { text-align: left; width: 80%; margin-top: 0.7rem; }
   .main .main-slider .item .slide-num { display: none; }
-  .main .scroll-down { top: 29%; right: 47%; }
+  .main .scroll-down { top: 31%; right: 47%; }
   .main .scroll-down .scroll-down-icon { border-top: 1px solid #041419; border-right: 1px solid #041419; }
   .main .main-content .section { padding: 0 5%; }
   .main .main-content .section .section-wrapper .section-content .introduce { position: relative; }
