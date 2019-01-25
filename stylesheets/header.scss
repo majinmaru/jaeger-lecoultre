@@ -216,6 +216,7 @@
 				@include animation(stretch 0.5s ease);
 				height: 100vh;
 				background-color: $main-color2;
+				position: fixed;
 				.nav-gnb {
 					@include flexbox();
 					.nav-gnb__tab {

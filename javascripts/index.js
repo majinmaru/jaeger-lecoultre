@@ -1,17 +1,5 @@
 $(document).ready(function(){
   $(".nav-logo a").find('img').attr('src', 'images/common/fulllogo.svg');
-  var slideWrapper = $(".main-slider");
-    slideWrapper.slick({
-    autoplay: true,
-    autoplaySpeed:7000,
-    speed:500,
-    arrows:false,
-    dots: true,
-    swipe:true,
-    fade: true,
-    zIndex: 1,
-    pauseOnHover: false
-  });
 
   function imageSetting() {
     var windowWidth = $(window).width();
@@ -28,6 +16,19 @@ $(document).ready(function(){
   }
   imageSetting();
   
+  var slideWrapper = $(".main-slider");
+    slideWrapper.slick({
+    autoplay: true,
+    autoplaySpeed:7000,
+    speed:500,
+    arrows:false,
+    dots: true,
+    swipe:true,
+    fade: true,
+    zIndex: 1,
+    pauseOnHover: false
+  });
+
   function listAppear(){
   	var sectionTwoTop = $(".two").offset().top;
   	var reactToTop =  sectionTwoTop*0.8;

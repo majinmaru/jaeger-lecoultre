@@ -53,7 +53,7 @@
   .header .nav .nav-logo a img { width: 50%; }
   .header .nav .nav-gnb { display: none; width: 100%; margin-top: 36%; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
   .header .nav .nav-search { display: none; }
-  .header .nav.mobile { -webkit-animation: stretch 0.5s ease; animation: stretch 0.5s ease; height: 100vh; background-color: #9e987d; }
+  .header .nav.mobile { -webkit-animation: stretch 0.5s ease; animation: stretch 0.5s ease; height: 100vh; background-color: #9e987d; position: fixed; }
   .header .nav.mobile .nav-gnb { display: -webkit-box; display: -ms-flexbox; display: flex; }
   .header .nav.mobile .nav-gnb .nav-gnb__tab { margin: 1.5rem 0; font-size: 0.7rem; }
   .header .nav.mobile .nav-search { width: 75%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: flex-end; -moz-justify-content: flex-end; -ms-justify-content: flex-end; justify-content: flex-end; -ms-flex-pack: flex-end; height: 2rem; border: 1px solid #041419; margin-top: 2rem; }
