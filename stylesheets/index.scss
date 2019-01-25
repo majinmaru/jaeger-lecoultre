@@ -798,14 +798,14 @@ body {
 	.main {
 		margin-top: -4rem;
 		.main-slider {
-			height: 90vh;
+			height: 159vw;
 			.item {
 				video {
 					display: none;
 				}
 				.slider-image {
 					width: 100vw;
-					height: 90vh;
+					height: 159vw;
 					@include flexbox();
 					@include justify-content(center);
 					@include align-items(center);
