@@ -1,6 +1,17 @@
 $(document).ready(function(){
   $(".nav-logo a").find('img').attr('src', 'images/common/fulllogo.svg');
   var slideWrapper = $(".main-slider");
+    slideWrapper.slick({
+    autoplay: true,
+    autoplaySpeed:7000,
+    speed:500,
+    arrows:false,
+    dots: true,
+    swipe:true,
+    fade: true,
+    zIndex: 1,
+    pauseOnHover: false
+  });
 
   function imageSetting() {
     var windowWidth = $(window).width();
@@ -14,29 +25,8 @@ $(document).ready(function(){
       $(mainSliderItem).eq(5).prepend('<div class="slider-image"><img src="images/index/mobile/slide-5.jpg"/></div>');
       $(mainSliderItem).eq(6).prepend('<div class="slider-image"><img src="images/index/mobile/slide-6.jpg"/></div>');
     }
-    slideWrapper.slick({
-      autoplay: true,
-      autoplaySpeed:7000,
-      speed:500,
-      arrows:false,
-      dots: true,
-      fade: true,
-      zIndex: 1,
-      pauseOnHover: false
-    });
   }
   imageSetting();
-  
-  slideWrapper.slick({
-    autoplay: true,
-    autoplaySpeed:7000,
-    speed:500,
-    arrows:false,
-    dots: true,
-    fade: true,
-    zIndex: 1,
-    pauseOnHover: false
-  });
   
   function listAppear(){
   	var sectionTwoTop = $(".two").offset().top;
