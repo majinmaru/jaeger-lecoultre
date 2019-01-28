@@ -31,90 +31,200 @@ body {
   100% { transform:translateY(0); opacity: 1; }
 }
 
+@-webkit-keyframes ltr {
+  0%   { transform:translate(-15px,0) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(15px,0) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes ltr {
+  0%   { transform:translate(-15px,0) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(15px,0) rotate(45deg); opacity: 0; }
+}
+@keyframes ltr {
+  0%   { transform:translate(-15px,0) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(15px,0) rotate(45deg); opacity: 0; }
+}
 .container {
 	width: 100%;
 	position: relative;
 	margin-top: -8rem;
-	.jumbotron {
-		position: relative;
+	@include box-sizing(border-box);
+	padding: 0 17%;
+	.watches-main {
+		margin-top: 12rem;
 		width: 100%;
-		height: 83vh;
-		overflow: hidden;
-		@include flexbox();
-		@include justify-content(center);
-		@include align-items(center);
-		background-image: url('../../images/watches/product-bg.png'), linear-gradient(180deg, rgba(128, 128, 128, 0) 0%, rgba(128, 128, 128, 0.2) 100%);
-		background-repeat: no-repeat;
-		background-size: cover;
-		.jumbotron-inner {
-			margin-top: 4rem;
-			width: 70%;
-			height: 65%;
-			border: 3px solid $main-color1;
-			padding: 0 6.5%;
-			background-color: $main-color1;
-			overflow: hidden;
-			position: relative;
-			@include box-sizing(border-box);
+		height: 30vw;
+		position: relative;
+		.main-image {
+			width: calc(96% / 3);
+			height: 30vw;
 			@include flexbox();
-			@include flex-direction(column);
 			@include justify-content(center);
-			.jumbotron-indicator {
-				width: 13rem;
-				height: 0.5rem;
-				background-color: $main-color2;
-				margin-left: 50%;
+			@include align-items(center);
+			position: absolute;
+			right: 0;
+			background-color: $main-color2-150;
+			img {
+				width: 80%;
 			}
-			.jumbotron-title {
-				margin-top: 1.3rem;
-				font-family: 'Libre Baskerville', serif;
-				font-size: 3rem;
-				line-height: 3.6rem;
-				word-break: keep-all;
-				word-wrap: break-word;
-				color: $main-color2;
-				margin-left: 65%;
-			}
-			.jumbotron-subtitle {
-				width: 23%;
-				margin-top: 1.5rem;
-				font-family: 'Nanum Gothic', sans-serif;
-				word-break: keep-all;
-				word-wrap: break-word;
-				color: $main-color2;
-				font-size: 0.7rem;
-				line-height: 1.4rem;
-				margin-left: 65%;
-			}
-			.jumbotron-benedict {
+			.main-image-side {
 				position: absolute;
-				left: 15%;
-				width: 32%;
-				bottom: -27%;
-				img {
-					width: 100%;
+				width: 20vw;
+				height: 2rem;
+				@include transform(rotate(-90deg));
+				@include transform-origin(right top);
+				right: 0;
+				top: 0;
+				background-color: $main-color2;
+				p {
+					color: $font-white;
+					font-size: 0.7rem;
+					line-height: 2rem;
+					text-align: center;
+					@include transform(rotate(180deg));
 				}
 			}
 		}
-		.jumbotron-box {
-			width: 21%;
-			height: 16%;
-			border: 2px solid $main-color2;
-			background-color: transparent;
+		.main-text {
+			width: 70%;
 			position: absolute;
-			left: 32%;
-			top: 61%;			
-		}
-		.jumbotron-num {
-			position: absolute;
-			font-family: 'Libre Baskerville', serif;
-			font-size: 0.9rem;
-			font-weight: bold;
-			color: $main-color1;
-			right: 10.3%;
-			top: 53%;
+			left: 0;
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(space-between);
+			.main-text__header {
+				width: 100%;
+				.main-text__header-border {
+					margin-top: 1rem;
+					width: 100%;
+					height: 3px;
+					background-color: $main-color1;
+					&.short {
+						width: calc(96% / 3);
+					}
+				}
+				.main-text__header-title {
+					margin-top: 2rem;
+					font-size: 3rem;
+					font-family: 'Prata', serif;
+					color: $main-color1;
+					text-align: left;
+					width: calc(96% / 3);
+					margin-bottom: 2rem;
+				}
+				.main-text__header-subtitle {
+					width: calc(96% / 3);
+					margin-top: 2.5rem;
+					color: $main-color1;
+					font-size: 0.7rem;
+					line-height: 1.4rem;
+					text-align: left;
+					word-break: keep-all;
+					word-wrap: break-word;
+				}
+			}
+			.main-text__bottom {
+				width: 100%;
+				@include flexbox();
+				@include justify-content(space-between);
+				margin-top: 2rem;
+				.main-text__bottom-link {
+					@include flexbox();
+					@include flex-direction(column);
+					width: calc(96% / 3);
+					.bottom-link__tab {
+						@include flexbox();
+						@include align-items(center);									
+						width: 100%;
+						height: 3rem;
+						position: relative;
+						border-bottom: 1px solid $main-color2;
+						margin-top: 1rem;
+						cursor: pointer;
+						&:hover {
+							.bottom-link__tab-arrow {
+								span {
+									@include animation(ltr 1s ease infinite);
+								}
+							}
+						}
+						.bottom-link__tab-num {
+							font-size: 0.75rem;
+							font-family: 'Poppins', sans-serif;
+							font-weight: 900;
+							color: $main-color2;
+							margin-right: 1rem;
+						}
+						.bottom-link__tab-title {
+							font-size: 0.75rem;
+							font-family: 'Spoqa Han Sans', 'Sans-serif';
+							color: $main-color2;
+						}
+						.bottom-link__tab-arrow {
+							width: 3rem;
+							height: 3rem;
+							@include flexbox();
+							@include justify-content(center);
+							@include align-items(center);
+							position: absolute;
+							right: 0;
+							span {
+								width: 0.6rem;
+								height: 0.6rem;
+								border-top: 1px solid $main-color2;
+								border-right: 1px solid $main-color2;
+								@include transform(rotate(45deg));
+							}
+						}
+					}
+				}
+				.main-text__bottom-watch {
+					width: 30%;
+					.bottom-watch__title {
+						margin-top: 1.5rem;
+						font-size: 0.7rem;
+						font-family: 'Spoqa Han Sans', 'Sans-serif';
+						color: $main-color1;
+						font-weight: bold;
+						text-align: right;
+						width: 100%;
+					}
+					.bottom-watch__desc {
+						width: 100%;
+						margin-top: 1rem;
+						color: $main-color1;
+						font-size: 0.7rem;
+						line-height: 1.4rem;
+						text-align: right;
+						word-break: keep-all;
+						word-wrap: break-word;
+						font-family: 'Nanum Gothic', sans-serif;
+					}
+				}
+			}
 		}
 	}
+	.watches-content {
+		.watch-list {
+			width: 100%;
+			.watch-list__title {
+				font-family: 'Prata', serif;
+				color: $main-color1;
+				font-size: 2rem;
+			}
+			.watch-list__section {
+				width: 100%;
+				.watch-width {}
+				.watch-length {}
+			}
+		}
+	}
+
+
+
+	
 	.content {
 		width: 100%;
 		.content-wrapper {

@@ -34,287 +34,211 @@ body {
 
 .container {
 	width: 100%;
+	min-width: 811px;
 	position: relative;
 	margin-top: -8rem;
-	.jumbotron {
-		position: relative;
-		width: 100%;
-		height: 83vh;
+	.history-main {
+		margin-top: 12rem;
+		width: 66%;
+		@include box-sizing(border-box);
+		margin: 0 17%;
 		@include flexbox();
-		@include justify-content(center);
-		@include align-items(center);
-		background-image: url('../../images/history/history-bg-blur.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
-		.jumbotron-inner {
-			margin-top: 4rem;
-			width: 70%;
-			height: 65%;
-			border: 3px solid $main-color1;
-			padding: 0 6.5%;
-			@include box-sizing(border-box);
-			@include flexbox();
-			@include flex-direction(column);
-			@include justify-content(center);
-			background-image: url('../../images/history/history-bg.jpg');
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center 80%;
-			position: relative;
-			.jumbotron-indicator {
-				margin-top: -1.5rem;
-				width: 14rem;
-				height: 0.5rem;
+		position: relative;
+		.history-main__content {
+			width: 60%;
+			margin-left: 40%;
+			.main-content__image {
+				width: 100%;
+				height: 20vw;
+				overflow: hidden;
+				@include flexbox();
+				@include justify-content(center);
+				@include align-items(center);
+				@include box-shadow(5px 7px 12px $box-shadow);
+				img {
+					width: 100%;
+				}
+			}
+			.main-content__text {
+				width: 100%;
+				position: relative;
+				.main-content__text-desc {
+					width: 75%;
+					font-size: 0.85rem;
+					line-height: 1.7rem;
+					font-family: 'Nanum Gothic', sans-serif;
+					word-break: keep-all;
+					word-wrap: break-word;
+					color: $main-color1;
+					text-align: left;
+					margin-top: 2rem;
+					@include box-sizing(border-box);
+					padding-left: 5%;
+					z-index: 5;
+					position: relative;
+				}
+				.main-content__text-year {
+					font-family: 'Poppins', sans-serif;
+					font-size: 6rem;
+					font-weight: 900;
+					color: $font-pale-gray;
+					width: 100%;
+					text-align: right;
+					position: absolute;
+					right: 0;
+					top: -2rem;
+				}
+			}
+		}
+		.history-main__header {
+			width: 35%;
+			position: absolute;
+			.main-header__border {
+				margin-top: 2rem;
+				width: 100%;
+				height: 3px;
 				background-color: $main-color1;
-				margin-left: -19%;
+				&.short {
+					width: 50%;
+				}
 			}
-			.jumbotron-title {
-				margin-top: 1.3rem;
-				font-family: 'Libre Baskerville', serif;
+			.main-header__title {
+				font-family: 'Prata', serif;
 				font-size: 3rem;
-				line-height: 3.6rem;
-				word-break: keep-all;
-				word-wrap: break-word;
 				color: $main-color1;
-				//font-weight: bold;
+				margin-top: 2rem;
 			}
-			.jumbotron-subtitle {
-				width: 20%;
-				font-family: 'Nanum Gothic', sans-serif;
-				word-break: keep-all;
-				word-wrap: break-word;
-				color: $main-color1;
+			.main-header__subtitle {
+				margin-top: 2rem;
+				margin-bottom: 2rem;
 				font-size: 0.7rem;
 				line-height: 1.4rem;
-				text-shadow: 0 0 10px $white;
-				position: absolute;
-				right: 6%;
+				font-family: 'Nanum Gothic', sans-serif;
+				word-break: keep-all;
+				word-wrap: break-word;
+				color: $main-color1;
+				width: 70%;
 			}
-		}
-		.jumbotron-num {
-			position: absolute;
-			font-family: 'Libre Baskerville', serif;
-			font-size: 0.9rem;
-			font-weight: bold;
-			color: $main-color1;
-			right: 10.3%;
-			top: 53%;
 		}
 	}
-	.content {
+	.history-jlc {
 		width: 100%;
-		.content-wrapper {
+		margin-top: 3rem;
+		img {
 			width: 100%;
-			padding: 0 13%;
+		}
+	}
+	.history-content {
+		width: 100%;
+		@include box-sizing(border-box);
+		padding: 0 17%;
+		margin-top: 13rem;
+		.history-content__card {
+			margin-bottom: 10.5rem;
+			width: 100%;
+			height: 20vw;
+			position: relative;
 			@include flexbox();
-			@include flex-direction(column);
-			@include align-items(center);
-			@include box-sizing(border-box);
-			.tab-list {
-				width: 40%;
-				margin-top: 6rem;
-				padding: 0 3%;
-				@include box-sizing(border-box);
+			background-color: transparent;	
+			.card-image {
+				width: 60%;
+				height: 20vw;
+				position: absolute;
 				@include flexbox();
-				@include flex-wrap(wrap);
-				.tab {
-					@include flexbox();
-					@include flex-direction(column);
-					@include align-items(center);
-					@include box-sizing(border-box);
-					position: relative;
-					width: calc(100% / 2);
-					background-color: $white;
-					color: $main-color2;					
-					border-right: 1px solid $main-color2;					
-					margin-top: 1rem;
-					cursor: pointer;
-					@include transition(all 0.5s ease);
-					&:nth-of-type(1) {
-						border-left: 1px solid $main-color2;
-					}	
-					&:hover {
-						color: $main-color1;						
-						.tab__icon {
-							.tab-icon {
-								opacity: 0;
-							}
-							.tab-icon-active {
-								opacity: 1;
-							}
-						}
-					}
-					&.active {
-						.tab__active-bar {
-							opacity: 1;
-						}
-						.tab__icon {
-							.tab-icon {
-								opacity: 0;
-							}
-							.tab-icon-active {
-								opacity: 1;
-							}
-						}
-					}
-					.tab__active-bar {
-						position: absolute;
-						top: 0;
-						width: 100%;
-						height: 0.5rem;
-						background-color: $main-color1;
-						opacity: 0;
-						@include transition(all 0.5s ease);
-					}
-					.tab__icon {
-						margin-top: 2rem;
-						width: 20%;
-						position: relative;
-						.tab-icon {
-							width: 100%;
-							opacity: 1;
-							@include transition(all 0.5s ease);
-						}
-						.tab-icon-active {
-							width: 100%;
-							position: absolute;
-							top: 0;
-							opacity: 0;
-							@include transition(all 0.5s ease);
-						}
-					}
-					.tab__subtitle {
-						font-family: 'Poppins', sans-serif;						
-						font-size: 0.6rem;
-						text-align: center;
-						margin-top: 0.85rem;
-					}
-					.tab__title {
-						font-family: 'Nanum Gothic', sans-serif;						
-						font-size: 0.8rem;
-						font-weight: bold;
-						line-height: 1.1rem;
-						text-align: center;
-						margin-top: 0.2rem;
-						margin-bottom: 0.85rem;
-					}
+				@include justify-content(center);
+				@include align-items(center);
+				background-color: $gray;
+				overflow: hidden;
+				@include box-shadow(5px 7px 12px $box-shadow);
+				img {
+					width: 100%;
+					opacity: 0.85;
+				}
+				&.right {
+					right: 0;
+				}
+				&.left {
+					left: 0;
 				}
 			}
-			.tab-box {
-				width: 100%;
-				margin-top: 7rem;
-				display: none;
-				&.show {
-					display: block;
-					@include animation(appear 0.5s ease);
+			.card-text {
+				position: absolute;
+				width: 45%;
+				&.left{
+					left: 0;
 				}
-				.tab-box__header {
-					width: 100%;
-					@include flexbox();
-					@include flex-direction(column);
-					@include align-items(center);
-					position: relative;
-					.tab-box__subtitle {
-						font-family: 'Poppins', sans-serif;						
-						font-size: 0.8rem;
-						text-align: center;
-						color: $main-color2;
-					}
-					.tab-box__title {
-						font-family: 'Nanum Gothic', sans-serif;						
-						font-size: 1.5rem;
-						line-height: 1.9rem;
-						text-align: center;
-						margin-top: 0.4rem;
-						position: relative;
-						color: $main-color1;
-						font-weight: bold;
-						&:after {
-							content: '';
-							width: 100%;
-							position: absolute;
-							height: 0.2rem;
-							background-color: $main-color2;
-							display: block;
-							margin-top: 0.8rem;
-						}
-					}
-					.tab-box__title-deco {
-						width: 0.5rem;
-						height: 0.5rem;
-						border-radius: 0.5rem;
-						border: 1px solid $main-color2;
-						background-color: $main-color1;
-						position: absolute;
-						bottom: -1.2rem;
-					}
+				&.right {
+					right: 0;
+					.card-text__desc {
+						padding-left: 15%;
+						padding-right: 5%;
+					}					
 				}
-				.tab-box__content {
-					margin-top: 7rem;
+				.card-text__border {
 					width: 100%;
+					height: 2px;
+					background-color: $main-color1;
+					margin-top: 2.5rem;
+				}
+				.card-text__desc {
+					width: 100%;
+					font-size: 0.85rem;
+					line-height: 1.7rem;
+					font-family: 'Nanum Gothic', sans-serif;
+					word-break: keep-all;
+					word-wrap: break-word;
+					color: $main-color1;
+					text-align: left;
+					margin-top: 2.5rem;
 					@include box-sizing(border-box);
-					padding: 0 5%;
-					margin-bottom: 4rem;
-					.history-all {
-						width: 100%;
-						@include flexbox();
-						.history-all__image {
-							width: 50%;
-							height: 19vw;
-							@include flexbox();
-							@include justify-content(center);
-							overflow: hidden;
-							background-color: $main-color2;
-							img {
-								height: 100%;
-								opacity: 0.85;
-							}
-						}
-						.history-all__text {
-							width: 50%;
-							@include box-sizing(border-box);
-							padding: 0 7%;
-							@include flexbox();
-							@include flex-direction(column);
-							@include justify-content(center);
-							.history-all__text-title {
-								font-size: 1rem;
-								font-weight: bold;
-								font-family: 'Nanum Gothic', sans-serif;
-								margin-bottom: 2rem;
-							}
-							.history-all__text-content {
-								font-size: 0.7rem;
-								line-height: 1.4rem;
-								font-family: 'Nanum Gothic', sans-serif;
-								word-break: keep-all;
-								word-wrap: break-word;
-							}
-						}
-					}
-					.videobox {
-						width: 100%;
-						position: relative;
-						padding-bottom: 56.25%;
-						iframe {
-							position: absolute;
-							width: 100%;
-							height: 100%;							
-						}
-					}
+					padding-left: 5%;
+					padding-right: 15%;
+					z-index: 5;
+					position: absolute;
 				}
-			}
-			.gototop {
-				padding: 0.8rem 4.5rem;
-				font-size: 0.85rem;
-				font-family: 'Nanum Gothic', sans-serif;
-				border: 1px solid $main-color2;
-				color: $main-color2;
-				cursor: pointer;
-				background-color: transparent;
-				outline: none;
+				.card-text__year {
+					font-family: 'Poppins', sans-serif;
+					font-size: 6rem;
+					font-weight: 900;
+					color: $font-pale-gray;
+					width: 100%;
+					text-align: right;
+					position: absolute;
+					right: 0;
+					top: 12rem;
+				}
 			}
 		}
+	}	
+	.gototop {
+		padding: 0.8rem 4.5rem;
+		font-size: 0.85rem;
+		font-family: 'Nanum Gothic', sans-serif;
+		border: 1px solid $main-color2;
+		color: $main-color2;
+		cursor: pointer;
+		background-color: transparent;
+		outline: none;
+		width: 20%;
+		margin-left: 40%;
+		@include transition(all 0.5s ease);
+		&:hover {
+			background-color: $main-color2;
+			color: $main-color1;
+		}
+	}
+	
+}
+@media screen and (min-width: 811px) {
+	.container {
+		.history-main {
+			min-width: 811px;
+			margin: 12rem auto 0 auto;
+		}
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 810px) {
+	.container {
+
 	}
 }

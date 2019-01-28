@@ -1,23 +1,31 @@
-$(document).ready(function(){
-	$(".tab-list .tab").first().addClass('active');
-	$(".tab-box").first().addClass('show');
+$(document).ready(function(){	
 
-	$(".tab-list .tab").click(function(e){
-		e.preventDefault();
-		var $currentIndex = $(this).index();
-		$(this).addClass('active').siblings().removeClass('active');
-		$(".tab-box").eq($currentIndex).addClass('show').siblings().removeClass('show');
-	});
-
-	function parallaxOne(){
-		var jumboTop = $(".jumbotron-images").offset().top;
-		var windowScroll = $(window).scrollTop();
-		if (windowScroll > jumboTop*0.9){
-			$(".jumbotron-images").find('img').css('transform', 'translateY(-' + windowScroll * 0.15 + 'px)');
+	function showIssuesBox(){
+		var issuesBox = $(".issues-box");
+		var scrollTop = $(window).scrollTop();
+		var i;
+		
+		for(var i = 0; i < 2; i++){
+			var issuesBoxTop = issuesBox.eq(i).offset().top;
+			if(scrollTop > issuesBoxTop*0.6) {
+				issuesBox.eq(i).addClass('show');
+			}
+		}
+		for(var i = 2; i < 4; i++){
+			var issuesBoxTop = issuesBox.eq(i).offset().top;
+			if(scrollTop > issuesBoxTop*0.75) {
+				issuesBox.eq(i).addClass('show');
+			}
+		}
+		for(var i = 4; i < issuesBox.length; i++){
+			var issuesBoxTop = issuesBox.eq(i).offset().top;
+			if(scrollTop > issuesBoxTop*0.85) {
+				issuesBox.eq(i).addClass('show');
+			}
 		}
 	}
-	parallaxOne();
-
+	
+	/*	
 	function showIssuesBox(){
 		var issuesBoxTop = $(".issues-box").offset().top;
 		var windowScroll = $(window).scrollTop();
@@ -25,16 +33,9 @@ $(document).ready(function(){
 			$(".issues-box").addClass('show');
 		}
 	}
-	$(".gototop").click(function(e){
-		e.preventDefault();
-		var tabTop = $(".content").offset().top;
-		$('body, html').animate({
-			scrollTop : tabTop
-		}, 800)
-	});
+	*/
 	
-	$(window).scroll(function() {		
-		parallaxOne();
+	$(window).scroll(function() {	
 		showIssuesBox();	
 	});
 });

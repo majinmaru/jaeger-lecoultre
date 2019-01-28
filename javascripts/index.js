@@ -28,7 +28,7 @@ $(document).ready(function(){
     zIndex: 1,
     pauseOnHover: false
   });
-
+/*
   function listAppear(){
   	var sectionTwoTop = $(".two").offset().top;
   	var reactToTop =  sectionTwoTop*0.8;
@@ -40,6 +40,7 @@ $(document).ready(function(){
   $(window).scroll(function() {
 		listAppear();
 	});
+  */
   $(window).resize(function() {
     imageSetting();
   })

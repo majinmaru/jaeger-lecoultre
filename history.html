@@ -12,7 +12,9 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/header.css" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/history.css" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/footer.css" />
+	<link rel="stylesheet" type="text/css" href="lib/stylesheets/animate.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="lib/javascripts/wow.min.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -42,168 +44,139 @@
 		</div>
 	</header>
 	<div class="container">
-		<div class="jumbotron">
-			<div class="jumbotron-inner">
-				<div class="jumbotron-indicator"></div>
-				<h1 class="jumbotron-title">Our<br>History</h1>
-				<p class="jumbotron-subtitle">예거 르쿨트르 메종은 창립 이후로 1,200개가 넘는 칼리버를 탄생시켜왔으며 그로 인해 오늘 날 시계 제조 산업 내에서 고유의 명성을 얻을 수 있었습니다.</p>
+		<div class="history-main">
+			<div class="history-main__content">
+				<div class="main-content__image">
+					<img src="images/history/1833.jpg" alt="1833">
+				</div>
+				<div class="main-content__text">
+					<div class="main-content__text-year">1833</div>
+					<div class="main-content__text-desc">1833년 앙트완 르쿨트르(Antoine LeCoultre)가 스위스 쥐라 국경지대에 예거 르쿨트르의 최초 시계공방을 설립했습니다.</div>					
+				</div>
 			</div>
-			<div class="jumbotron-num">02</div>
-		</div>
-		<div class="content">
-			<div class="content-wrapper">
-				<div class="tab-list">
-					<div class="tab">
-						<div class="tab__active-bar"></div>
-						<div class="tab__icon">
-							<img class="tab-icon" src="images/common/video-icon.svg" alt="영상">
-							<img class="tab-icon-active" src="images/common/video-icon-dark.svg" alt="영상-선택됨">
-						</div>
-						<p class="tab__subtitle">The Story of Jeager-leCoultre</p>
-						<p class="tab__title">예거 르쿨트르의 역사<br>영상으로 보기</p>
-					</div>
-					<div class="tab">
-						<div class="tab__active-bar"></div>
-						<div class="tab__icon">
-							<img class="tab-icon" src="images/common/article-icon.svg" alt="글">
-							<img class="tab-icon-active" src="images/common/article-icon-dark.svg" alt="글-선택됨">
-						</div>
-						<p class="tab__subtitle">The Story of Jeager-leCoultre</p>
-						<p class="tab__title">예거 르쿨트르의 역사<br>전체보기</p>
-					</div>
-				</div>
-				<div id="box-0" class="tab-box">
-					<div class="tab-box__header">
-						<h3 class="tab-box__subtitle">The Story of Jeager-leCoultre</h3>
-						<h2 class="tab-box__title">예거 르쿨트르의 역사<br>영상으로 보기</h2>
-						<div class="tab-box__title-deco"></div>
-					</div>
-					<div class="tab-box__content">
-						<div class="videobox">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/ddAy6UEGa_Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div>						
-					</div>
-				</div>
-				<div id="box-1" class="tab-box">
-					<div class="tab-box__header">
-						<h3 class="tab-box__subtitle">The Story of Jeager-leCoultre</h3>
-						<h2 class="tab-box__title">예거 르쿨트르의 역사<br>전체보기</h2>
-						<div class="tab-box__title-deco"></div>
-					</div>
-					<div class="tab-box__content">
-						<div class="history-all">
-							<div class="history-all__image">
-								<img src="images/history/1833.jpg">
-							</div>
-							<div class="history-all__text">
-								<div class="history-all__text-title">1833</div>
-								<div class="history-all__text-content">1833년 앙트완 르쿨트르(Antoine LeCoultre)가 스위스 쥐라 국경지대에 예거 르쿨트르의 최초 시계공방을 설립했습니다.</div>
-							</div>
-						</div>
-						<div class="history-all">
-							<div class="history-all__text">
-								<div class="history-all__text-title">1844</div>
-								<div class="history-all__text-content">앙트완 르쿨트르가 개발한 밀리오노미터(Millionometre)는 마이크론 단위까지 측정할 수 있는 최초의 기구로 보다 정교한 시계 부품 제작이 가능해졌습니다.</div>
-							</div>
-							<div class="history-all__image">
-								<img src="images/history/1844.jpg">
-							</div>
-						</div>
-						<div class="history-all">
-							<div class="history-all__image">
-								<img src="images/history/1866.jpg">
-							</div>
-							<div class="history-all__text">
-								<div class="history-all__text-title">1866</div>
-								<div class="history-all__text-content">앙트완 르쿨트르의 아들인 엘리 르쿨트르의 지휘 아래 모든 시계 제조 기술은 서서히 한 곳으로 집중되었습니다. </div>
-							</div>
-						</div>
-						<div class="history-all">
-							<div class="history-all__text">
-								<div class="history-all__text-title">1903</div>
-								<div class="history-all__text-content">앙트완 르쿨트르의 손자인 자크 데이비드 르쿨트르는 파리 시계 제조업자 에드몽 예거(Edmond Jaeger)가 스위스 시계제조업체들에게 내밀었던 도전장을 받아들이고 울트라 씬 시계를 개발하기 시작합니다.</div>
-							</div>
-							<div class="history-all__image">
-								<img src="images/history/1903.jpg">
-							</div>
-						</div>
-						<div class="history-all">
-							<div class="history-all__image">
-								<img src="images/history/1928.jpg">
-							</div>
-							<div class="history-all__text">
-								<div class="history-all__text-title">1928</div>
-								<div class="history-all__text-content">장-레옹 휘테(Jean-Léon Reutter)가 발명하고 르쿨트르 & 씨(LeCoultre & Cie) 매뉴팩처가 개발한 애트모스 펜듈럼은 클래식하면서 아방가르드한 분위기를 자아냅니다. 실내 온도가 단 1도만 변해도 에너지를 저장하여 이틀간 작동할 수 있습니다.</div>
-							</div>
-						</div>
-						<div class="history-all">
-							<div class="history-all__text">
-								<div class="history-all__text-title">1929</div>
-								<div class="history-all__text-content">초소형 수동 와인딩 칼리버인 칼리버 101을 제작하기 위해 워치메이커들은 듀오플랜 무브먼트를 더 축소했습니다. 사용된 98개 부품의 전체 무게는 1그램도 되지 않습니다.</div>
-							</div>
-							<div class="history-all__image">
-								<img src="images/history/1929.jpg">
-							</div>
-						</div>
-						<div class="history-all">
-							<div class="history-all__image">
-								<img src="images/history/1931.jpg">
-							</div>
-							<div class="history-all__text">
-								<div class="history-all__text-title">1931</div>
-								<div class="history-all__text-content">케이스 뒷면에 숨겨진 이야기를 알고 계시나요? 인도에서 근무하던 영국 장교들이 폴로 경기를 하는 중에도 파손되지 않고 착용할 수 있을 정도로 튼튼한 시계를 만들어 달라는 요청에 의해 탄생된 시계입니다.</div>
-							</div>
-						</div>
-						<div class="history-all">
-							<div class="history-all__text">
-								<div class="history-all__text-title">1958</div>
-								<div class="history-all__text-content">정확성, 높은 강도, 자기장 저항 기능을 탑재하고 1958년 출시된 지오피직 크로노미터는 시간의 신뢰도를 상징하는 타임피스 입니다.</div>
-							</div>
-							<div class="history-all__image">
-								<img src="images/history/1958.jpg">
-							</div>
-						</div>
-						<div class="history-all">
-							<div class="history-all__image">
-								<img src="images/history/1968.jpg">
-							</div>
-							<div class="history-all__text">
-								<div class="history-all__text-title">1968</div>
-								<div class="history-all__text-content">메종의 아이콘인 알람 기능을 갖춘 다이빙 시계는 수중에서 소리의 전파를 최적화할 수 있는 특허받은 트리플 케이스백 시스템을 장착하고 있습니다.</div>
-							</div>
-						</div>
-						<div class="history-all">
-							<div class="history-all__text">
-								<div class="history-all__text-title">2007</div>
-								<div class="history-all__text-content">1880년대의 크로노미터에서 영감을 받은 듀오미터 컬렉션은 듀얼 윙 컨셉을 기반으로 설계되었습니다. 두 개의 독립된 매커니즘 : 시간의 정확성을 담당하는 파트와 컴플리케이션 기능을 관장하는 두 개의 매커니즘이 하나의 레귤레이팅 기관을 공유하고 있습니다. </div>
-							</div>
-							<div class="history-all__image">
-								<img src="images/history/2007.jpg">
-							</div>
-						</div>	
-						<div class="history-all">
-							<div class="history-all__image">
-								<img src="images/history/2013.jpg">
-							</div>
-							<div class="history-all__text">
-								<div class="history-all__text-title">2013</div>
-								<div class="history-all__text-content">마스터 그랑 트래디션 자이로투르비옹 3 주빌리는 자이로투르비옹의 새로운 버전으로 브릿지가 없는 것이 특징입니다. 인스턴트 디지털 카운터를 장착한 크로노그래프는 이 메종의 혁신성을 오롯이 드러내는 기술적 위업입니다.</div>
-							</div>
-						</div>
-						<div class="history-all">
-							<div class="history-all__text">
-								<div class="history-all__text-title">2018</div>
-								<div class="history-all__text-content">1968년 탄생한 아이코닉 메모복스 폴라리스에서 영감을 받은 그랑 메종은 워치메이킹 노하우와 현대적이고 스포티한 품격이 어우러진 예거 르쿨트르 폴라리스 컬렉션을 새롭게 출시했습니다.</div>
-							</div>
-							<div class="history-all__image">
-								<img src="images/history/2018.jpg">
-							</div>
-						</div>	
-					</div>
-				</div>
-				<button class="gototop">위로 올라가기</button>
+			<div class="history-main__header">
+				<div class="main-header__border short"></div>
+				<div class="main-header__title">Our<br>History</div>
+				<div class="main-header__border"></div>
+				<div class="main-header__subtitle">예거 르쿨트르 메종은 창립 이후로 1,200개가 넘는 칼리버를 탄생시켜왔으며 그로 인해 오늘 날 시계 제조 산업 내에서 고유의 명성을 얻을 수 있었습니다.</div>			
 			</div>
 		</div>
+		<div class="history-jlc">
+			<img src="images/history/history-renew.jpg" alt="예거르쿨트르 쥐라 산맥">
+		</div>
+		<div class="history-content">
+			<div class="history-content__card wow slideInUp">
+				<div class="card-image right">
+					<img src="images/history/1844.jpg" alt="1844">
+				</div>
+				<div class="card-text left">
+					<div class="card-text__border"></div>
+					<div class="card-text__year">1844</div>
+					<div class="card-text__desc">앙트완 르쿨트르가 개발한 밀리오노미터(Millionometre)는 마이크론 단위까지 측정할 수 있는 최초의 기구로 보다 정교한 시계 부품 제작이 가능해졌습니다.</div>					
+				</div>
+			</div>
+			<div class="history-content__card wow slideInUp">
+				<div class="card-image left">
+					<img src="images/history/1866.jpg" alt="1866">
+				</div>
+				<div class="card-text right">
+					<div class="card-text__border"></div>
+					<div class="card-text__year">1866</div>
+					<div class="card-text__desc">앙트완 르쿨트르의 아들인 엘리 르쿨트르의 지휘 아래 모든 시계 제조 기술은 서서히 한 곳으로 집중되었습니다.</div>
+				</div>
+			</div>
+			<div class="history-content__card wow slideInUp">
+				<div class="card-image right">
+					<img src="images/history/1903.jpg" alt="1903">
+				</div>
+				<div class="card-text left">
+					<div class="card-text__border"></div>
+					<div class="card-text__year">1903</div>
+					<div class="card-text__desc">앙트완 르쿨트르의 손자인 자크 데이비드 르쿨트르는 파리 시계 제조업자 에드몽 예거(Edmond Jaeger)가 스위스 시계제조업체들에게 내밀었던 도전장을 받아들이고 울트라 씬 시계를 개발하기 시작합니다.</div>					
+				</div>
+			</div>
+			<div class="history-content__card wow slideInUp">
+				<div class="card-image left">
+					<img src="images/history/1928.jpg" alt="1928">
+				</div>
+				<div class="card-text right">
+					<div class="card-text__border"></div>
+					<div class="card-text__year">1928</div>
+					<div class="card-text__desc">장-레옹 휘테(Jean-Léon Reutter)가 발명하고 르쿨트르 & 씨(LeCoultre & Cie) 매뉴팩처가 개발한 애트모스 펜듈럼은 클래식하면서 아방가르드한 분위기를 자아냅니다. 실내 온도가 단 1도만 변해도 에너지를 저장하여 이틀간 작동할 수 있습니다.</div>
+				</div>
+			</div>
+			<div class="history-content__card wow slideInUp">
+				<div class="card-image right">
+					<img src="images/history/1929.jpg" alt="1929">
+				</div>
+				<div class="card-text left">
+					<div class="card-text__border"></div>
+					<div class="card-text__year">1929</div>
+					<div class="card-text__desc">초소형 수동 와인딩 칼리버인 칼리버 101을 제작하기 위해 워치메이커들은 듀오플랜 무브먼트를 더 축소했습니다. 사용된 98개 부품의 전체 무게는 1그램도 되지 않습니다.</div>					
+				</div>
+			</div>
+			<div class="history-content__card wow slideInUp">
+				<div class="card-image left">
+					<img src="images/history/1931.jpg" alt="1931">
+				</div>
+				<div class="card-text right">
+					<div class="card-text__border"></div>
+					<div class="card-text__year">1931</div>
+					<div class="card-text__desc">케이스 뒷면에 숨겨진 이야기를 알고 계시나요? 인도에서 근무하던 영국 장교들이 폴로 경기를 하는 중에도 파손되지 않고 착용할 수 있을 정도로 튼튼한 시계를 만들어 달라는 요청에 의해 탄생된 시계입니다.</div>
+				</div>
+			</div>
+			<div class="history-content__card wow slideInUp">
+				<div class="card-image right">
+					<img src="images/history/1958.jpg" alt="1958">
+				</div>
+				<div class="card-text left">
+					<div class="card-text__border"></div>
+					<div class="card-text__year">1958</div>
+					<div class="card-text__desc">정확성, 높은 강도, 자기장 저항 기능을 탑재하고 1958년 출시된 지오피직 크로노미터는 시간의 신뢰도를 상징하는 타임피스 입니다.</div>					
+				</div>
+			</div>
+			<div class="history-content__card wow slideInUp">
+				<div class="card-image left">
+					<img src="images/history/1968.jpg" alt="1969">
+				</div>
+				<div class="card-text right">
+					<div class="card-text__border"></div>
+					<div class="card-text__year">1968</div>
+					<div class="card-text__desc">메종의 아이콘인 알람 기능을 갖춘 다이빙 시계는 수중에서 소리의 전파를 최적화할 수 있는 특허받은 트리플 케이스백 시스템을 장착하고 있습니다.</div>
+				</div>
+			</div>
+			<div class="history-content__card wow slideInUp">
+				<div class="card-image right">
+					<img src="images/history/2007.jpg" alt="2007">
+				</div>
+				<div class="card-text left">
+					<div class="card-text__border"></div>
+					<div class="card-text__year">2007</div>
+					<div class="card-text__desc">1880년대의 크로노미터에서 영감을 받은 듀오미터 컬렉션은 듀얼 윙 컨셉을 기반으로 설계되었습니다. 두 개의 독립된 매커니즘 : 시간의 정확성을 담당하는 파트와 컴플리케이션 기능을 관장하는 두 개의 매커니즘이 하나의 레귤레이팅 기관을 공유하고 있습니다.</div>					
+				</div>
+			</div>
+			<div class="history-content__card wow slideInUp">
+				<div class="card-image left">
+					<img src="images/history/2013.jpg" alt="2013">
+				</div>
+				<div class="card-text right">
+					<div class="card-text__border"></div>
+					<div class="card-text__year">2013</div>
+					<div class="card-text__desc">마스터 그랑 트래디션 자이로투르비옹 3 주빌리는 자이로투르비옹의 새로운 버전으로 브릿지가 없는 것이 특징입니다. 인스턴트 디지털 카운터를 장착한 크로노그래프는 이 메종의 혁신성을 오롯이 드러내는 기술적 위업입니다.</div>
+				</div>
+			</div>
+			<div class="history-content__card wow slideInUp">
+				<div class="card-image right">
+					<img src="images/history/2018.jpg" alt="2018">
+				</div>
+				<div class="card-text left">
+					<div class="card-text__border"></div>
+					<div class="card-text__year">2018</div>
+					<div class="card-text__desc">1968년 탄생한 아이코닉 메모복스 폴라리스에서 영감을 받은 그랑 메종은 워치메이킹 노하우와 현대적이고 스포티한 품격이 어우러진 예거 르쿨트르 폴라리스 컬렉션을 새롭게 출시했습니다.</div>					
+				</div>
+			</div>
+		</div>
+		<button class="gototop">위로 올라가기</button>
 	</div>
 	<footer class="footer">
 		<div class="footer-wrapper">
