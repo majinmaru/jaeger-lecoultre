@@ -8,6 +8,7 @@ html {
 body {
 	width: 100%;
 	overflow-x: hidden;
+	background-color: $body-bg;
 }
 /*animated scroll arrow animation*/
 @-webkit-keyframes scroll-down {
@@ -385,7 +386,7 @@ body {
 						font-family: 'Prata', serif;
 						color: $main-color2;
 						position: relative;
-						background-color: $white;
+						background-color: $body-bg;
 						position: absolute;
 						bottom: -0.1rem;
 						margin-left: -26%;
@@ -400,6 +401,7 @@ body {
 					.introduce {
 						width: 100%;
 						@include flexbox();
+						@include align-items(flex-end);
 						.introduce-left {
 							width: 33%;
 							height: 32vw;
@@ -407,7 +409,7 @@ body {
 							@include flexbox();
 							@include justify-content(center);
 							@include align-items(center);
-							background-color: $main-color2-150;
+							background-color: $watch-bg;
 							img {
 								width: 90%;
 							}
@@ -436,7 +438,7 @@ body {
 								}
 								.big-watch-indicator {
 									width: calc(94% / 3);
-									height: 0.2rem;
+									height: 2px;
 									background-color: $main-color1;
 									margin-left: -7rem;
 								}
@@ -536,7 +538,7 @@ body {
 										@include flexbox();
 										@include justify-content(center);
 										@include align-items(center);
-										background-color: $main-color2-150;
+										background-color: $watch-bg;
 										img {
 											width: 85%;
 										}									
@@ -630,11 +632,12 @@ body {
 							position: relative;
 							.service-center {
 								width: 100%;
-								height: 35vw;
+								height: 30vw;
 								position: relative;
 								overflow: hidden;
 								.service-center-image {
 									width: 65%;
+									height: 30vw;
 									position: absolute;
 									top: 0;
 									right: 0;
@@ -643,10 +646,14 @@ body {
 									}
 								}
 								.service-center-text {
-									width: 30%;
+									width: 40%;
 									position: absolute;
 									top: 0;
 									left: 0;
+									height: 30vw;
+									@include flexbox();
+									@include flex-direction(column);
+									@include justify-content(space-between);
 									.service-center-find {
 										width: 100%;
 										height: 60%;
@@ -658,8 +665,7 @@ body {
 											height: 3px;
 											background-color: $main-color1;
 											&.short {
-												width: 70%;
-												margin-left: 60%;
+												width: 50%;
 											}
 										}
 										.service-center-find__title {
@@ -685,7 +691,7 @@ body {
 										}
 									}
 									.service-center-type {
-										width: 100%;
+										width: 70%;
 										height: 40%;
 										@include flexbox();
 										@include flex-direction(column);
@@ -695,29 +701,32 @@ body {
 											@include transition(all 0.5s ease);
 											@include box-sizing(border-box);
 											@include flexbox();
-											@include align-items(center);											
+											@include align-items(center);
+											border-bottom: 1px solid $main-color1;
+											position: relative;								
 											&:hover {
 												span {
 													@include animation(ltr 1s ease infinite);
 												}
 											}
 											a{
-												color: $main-color2;
+												color: $main-color1;
 												font-family: 'Nanum Gothic', sans-serif;
 												line-height: 2rem;
-												font-size: 0.9rem;
+												font-size: 0.7rem;
 												text-decoration: none;
 												position: relative;
 												margin-top: 1rem;
-												margin-bottom: 1rem;												
+												margin-bottom: 0.3rem;												
 											}
 											span {
-												width: 0.8rem;
-												height: 0.8rem;
-												border-top: 1px solid $main-color2;
-												border-right: 1px solid $main-color2;
+												width: 0.6rem;
+												height: 0.6rem;
+												border-top: 1px solid $main-color1;
+												border-right: 1px solid $main-color1;
 												@include transform(rotate(45deg));
-												margin-left: 3rem;
+												position: absolute;
+												right: 5%;
 											};											
 										}
 									}
@@ -831,9 +840,20 @@ body {
 		}
 		.main-content {
 			.section {
-				padding: 0 5%;
+				padding: 0 7%;
+				@include box-sizing(border-box);
 				.section-wrapper {
+					.section-title {
+						width: 100%;
+						position: absolute;
+						.section-title__title {						
+							font-size: 1.5rem;
+							margin-left: 0;
+							bottom: -0.6rem;
+						}					
+					}
 					.section-content {
+						padding: 0;
 						.introduce {
 							position: relative;
 							.introduce-left {
@@ -888,61 +908,73 @@ body {
 								}
 							}
 						}
+						.introduce-more {
+							padding-right: 0;
+							margin-top: 14rem;
+							&:after {
+								width: 100%;
+							}
+						}
 					}					
 				}
 				&.two {
-					margin-top: 16rem;
+					margin-top: 18rem;
 					.section-wrapper {
 						.section-content {
 							.service-wrapper {
 								.service-center {
 									width: 100%;
-									height: 60vw;
-									.service-center-find {
-										width: 50%;
-										height: 100%;
-										padding-top: 18%;
-										bottom: 0;
-										.service-center-find__arrow {
-											width: 1.5rem;
-											height: 1.5rem;
-											&:after {
-												width: 0.5rem;
-												height: 0.5rem;
-												top: 33%;
-												left: 27%;
-											}
-										}
-										.service-center-find__title {
-											font-size: 1rem;
-											margin-top: 0.8rem;
-										}
-										.service-center-find__subtitle {
-											margin-top: 0.7rem;
+									height: 90vw;
+									.service-center-image {
+										width: 55%;
+										height: 90vw;
+										overflow: hidden;
+										img {
+											width: unset;
+											height: 100%;
+											right: -38%;
+											position: absolute;
 										}
 									}
-								}
-								.service-list {
-									width: 100%;
-									height: 11rem;
-									position: relative;
-									.service-list-wrapper {
-										width: 100%;
-										height: 100%;
-										margin-left: 0;
-										.service-tab{
-											padding: 0 5%;
-											@include box-sizing(border-box);
-											.service-title {
+									.service-center-text {
+										width: 53%;
+										height: 90vw;
+										.service-center-find {
+											width: 100%;
+											.service-center-find__border {
+												width: 100%;
+												&.short {
+													width: 45%;
+												}
 											}
-											.service-arrow {
-												right: 5%;
+											.service-center-find__title {
+												font-size: 1rem;
+												margin-top: 1rem;
+											}
+											.service-center-find__subtitle {
+												margin-top: 1rem;
+												margin-bottom: 1rem;
+											}
+										}
+										.service-center-type {
+											.service-tab {
+												a {
+													margin-top: 0.5rem;					
+												}
+												span {
+													width: 0.5rem;
+													height: 0.5rem;
+												}
 											}
 										}
 									}
-								}
+								}								
 							}
 						}
+						.reference-number {							
+							font-size: 0.6rem;
+							padding: 0.8rem 3.5rem;
+						}						
 					}
 				}
 			}

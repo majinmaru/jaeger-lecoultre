@@ -8,6 +8,7 @@ html {
 body {
 	width: 100%;
 	overflow-x: hidden;
+	background-color: $body-bg;
 }
 .header {
 	.nav {
@@ -18,86 +19,131 @@ body {
 		}
 	}
 }
-
+@-webkit-keyframes ltr {
+  0%   { transform:translate(-15px,0) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(15px,0) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes ltr {
+  0%   { transform:translate(-15px,0) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(15px,0) rotate(45deg); opacity: 0; }
+}
+@keyframes ltr {
+  0%   { transform:translate(-15px,0) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(15px,0) rotate(45deg); opacity: 0; }
+}
 .container {
 	width: 100%;
 	position: relative;
 	margin-top: -8rem;
-	.jumbotron {
-		position: relative;
+	.services-main {
+		margin-top: 8rem;
 		width: 100%;
-		height: 83vh;
-		overflow: hidden;
+		@include box-sizing(border-box);
+		padding: 0 17%;
 		@include flexbox();
-		@include justify-content(center);
-		@include align-items(center);
-		background-image: url('../../images/services/service-center-bg.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: 0 47%;
-		.jumbotron-inner {
-			margin-top: 4rem;
-			width: 70%;
-			height: 65%;
-			border: 3px solid $main-color1;
-			padding: 0 6.5%;
-			position: relative;
-			background-color: $white;
-			@include box-sizing(border-box);
-			@include flexbox();
-			@include flex-direction(column);
-			@include justify-content(center);
-			.jumbotron-indicator {
-				width: 14rem;
-				height: 0.5rem;
+		position: relative;
+		.services-main__content {
+			width: 30%;
+			margin-left: 70%;
+			margin-top: 7%;
+			.content-tab-list {
+				width: 100%;
+				@include flexbox();
+				@include flex-direction(column);
+				.content-tab {
+					width: 100%;
+					height: 3rem;
+					@include flexbox();
+					@include align-items(center);
+					border-bottom: 1px solid $main-color2;
+					margin-top: 1rem;
+					position: relative;
+					cursor: pointer;
+					&:hover {
+						.content-tab__arrow {
+							span {
+								@include animation(ltr 1s ease infinite);
+							}
+						}
+					}
+					.content-tab__num {
+						font-size: 0.7rem;
+						font-family: 'Poppins', sans-serif;
+						font-weight: 900;
+						color: $main-color2;
+						margin-right: 0.5rem;
+					}
+					.content-tab__title {
+						font-size: 0.7rem;
+						font-family: 'Spoqa Han Sans', 'Sans-serif';
+						color: $main-color2;
+						margin-right: 0.5rem;
+					}
+					.content-tab__arrow {
+						width: 3rem;
+						height: 3rem;
+						@include flexbox();
+						@include justify-content(center);
+						@include align-items(center);
+						position: absolute;
+						right: 0;
+						span {
+							width: 0.6rem;
+							height: 0.6rem;
+							border-top: 1px solid $main-color2;
+							border-right: 1px solid $main-color2;
+							@include transform(rotate(45deg));
+						}
+					}
+				}
+			}
+		}
+		.services-main__header {
+			width: 30%;
+			position: absolute;
+			margin-top: 4%;
+			.main-header__border {
+				margin-top: 2rem;
+				width: 100%;
+				height: 3px;
 				background-color: $main-color1;
-				margin-left: -19%;
-				z-index: 5;
+				&.short {
+					width: 50%;
+				}
 			}
-			.jumbotron-title {
-				margin-top: 1.3rem;
-				font-family: 'Libre Baskerville', serif;
+			.main-header__title {
+				font-family: 'Prata', serif;
 				font-size: 3rem;
-				line-height: 3.6rem;
-				word-break: keep-all;
-				word-wrap: break-word;
 				color: $main-color1;
-				z-index: 5;
+				margin-top: 2rem;
 			}
-			.jumbotron-subtitle {
-				width: 23%;
-				margin-top: 1.5rem;
+			.main-header__subtitle {
+				margin-top: 2rem;
+				margin-bottom: 2rem;
+				font-size: 0.7rem;
+				line-height: 1.4rem;
 				font-family: 'Nanum Gothic', sans-serif;
 				word-break: keep-all;
 				word-wrap: break-word;
 				color: $main-color1;
-				font-size: 0.7rem;
-				line-height: 1.4rem;
-				z-index: 5;
+				width: 70%;
 			}
-			.jumbotron-inner-image {
-				width: 60%;
-				height: 80%;
-				position: absolute;
-				top: 12%;
-				right: 5%;
-				overflow: hidden;
-				img {
-					width: 100%;
-					position: absolute;
-					right: 0;
-					bottom: 5%;
-				}
-			}
-		}		
-		.jumbotron-num {
+		}
+	}
+	.services-jlc {
+		width: 100%;
+		height: 35vw;
+		margin-top: 9rem;
+		overflow: hidden;
+		position: relative;
+		opacity: 0.5;
+		img {
 			position: absolute;
-			font-family: 'Libre Baskerville', serif;
-			font-size: 0.9rem;
-			font-weight: bold;
-			color: $main-color1;
-			right: 10.3%;
-			top: 53%;
+			width: 100%;
+			top: 0;
 		}
 	}
 	.content {
@@ -117,52 +163,37 @@ body {
 				width: 100%;
 				@include flexbox();
 				@include flex-direction(column);
-				@include align-items(center);
+				@include align-items(flex-start);
 				position: relative;
-				.services__subtitle {
-					font-family: 'Poppins', sans-serif;						
-					font-size: 0.8rem;
-					text-align: center;
-					color: $main-color2;
-				}
+				.services__border {
+					margin-top: 2rem;
+					width: 100%;
+					height: 2px;
+					background-color: $main-color1;
+					&.short {
+						width: calc(96% / 3);
+					}
+				}				
 				.services__title {
-					font-family: 'Nanum Gothic', sans-serif;						
-					font-size: 1.5rem;
-					line-height: 1.9rem;
-					text-align: center;
-					margin-top: 0.4rem;
+					margin-top: 2rem;
+					font-family: 'Spoqa Han Sans', 'Sans-serif';						
+					font-size: 1.2rem;
+					line-height: 1.8rem;
 					position: relative;
 					color: $main-color1;
 					font-weight: bold;
-					&:after {
-						content: '';
-						width: 100%;
-						position: absolute;
-						height: 0.2rem;
-						background-color: $main-color2;
-						display: block;
-						margin-top: 0.8rem;
-					}
-				}
-				.services__title-deco {
-					width: 0.5rem;
-					height: 0.5rem;
-					border-radius: 0.5rem;
-					border: 1px solid $main-color2;
-					background-color: $main-color1;
-					position: absolute;
-					bottom: -1.2rem;
-				}
+				}				
 			}
 			.services__desc {
-				width: 50%;
-				text-align: center;
+				width: 43%;
 				font-size: 0.7rem;
 				line-height: 1.4rem;
 				color: $main-color1;
-				margin-top: 3rem;
 				word-break: keep-all;
 				word-wrap: break-word;
+				position: absolute;
+				margin-left: 11%;
+				margin-top: 9rem;
 			}
 			.service-wrapper {
 				width: 100%;

@@ -8,6 +8,7 @@ html {
 body {
 	width: 100%;
 	overflow-x: hidden;
+	background-color: $body-bg;
 }
 .header {
 	.nav {
@@ -208,7 +209,7 @@ body {
 						bottom: 0;
 						margin-bottom: -0.8rem;
 						left: 17%;
-						background-color: $white;		
+						background-color: $body-bg;		
 					}					
 				}
 				.tab-box__content {
@@ -289,10 +290,7 @@ body {
 								@include flexbox();
 								@include justify-content(center);
 								@include align-items(center);
-								@include box-sizing(border-box);
-								border-top: 1px solid $main-color2;	
-								border-left: 1px solid $main-color2;
-								border-bottom: 1px solid $main-color2;		
+								@include box-sizing(border-box);	
 								img {
 									width: 105%;
 								}
@@ -306,7 +304,7 @@ body {
 								padding-right: 4%;
 								@include box-sizing(border-box);
 								background-color: $white;
-								border: 1px solid $main-color2;		
+								border-left: 1px solid $main-color2;	
 								.issues-header {
 									width: 100%;
 									@include flexbox();

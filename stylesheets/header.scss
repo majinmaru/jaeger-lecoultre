@@ -91,7 +91,7 @@
 				&:after {
 					content: '';
 					width: 0;
-					height: 3px;
+					height: 2px;
 					background-color: $main-color1;
 					@include transition(all 0.3s ease);
 					position: absolute;

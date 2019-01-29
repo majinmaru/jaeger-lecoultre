@@ -1,29 +1,48 @@
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+@import url("https://fonts.googleapis.com/css?family=Prata");
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700,900");
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700");
 html { font-size: 16px; }
 
-body { width: 100%; overflow-x: hidden; }
+body { width: 100%; overflow-x: hidden; background-color: #f2f2f2; }
 
 .header .nav .nav-gnb .nav-gnb__tab:nth-of-type(6) { font-weight: bold; }
 
+@-webkit-keyframes ltr { 0% { transform: translate(-15px, 0) rotate(45deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(15px, 0) rotate(45deg); opacity: 0; } }
+@-moz-keyframes ltr { 0% { transform: translate(-15px, 0) rotate(45deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(15px, 0) rotate(45deg); opacity: 0; } }
+@keyframes ltr { 0% { transform: translate(-15px, 0) rotate(45deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(15px, 0) rotate(45deg); opacity: 0; } }
 .container { width: 100%; position: relative; margin-top: -8rem; }
-.container .jumbotron { position: relative; width: 100%; height: 83vh; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; background-image: url("../../images/services/service-center-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-position: 0 47%; }
-.container .jumbotron .jumbotron-inner { margin-top: 4rem; width: 70%; height: 65%; border: 3px solid #041419; padding: 0 6.5%; position: relative; background-color: #ffffff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; }
-.container .jumbotron .jumbotron-inner .jumbotron-indicator { width: 14rem; height: 0.5rem; background-color: #041419; margin-left: -19%; z-index: 5; }
-.container .jumbotron .jumbotron-inner .jumbotron-title { margin-top: 1.3rem; font-family: 'Libre Baskerville', serif; font-size: 3rem; line-height: 3.6rem; word-break: keep-all; word-wrap: break-word; color: #041419; z-index: 5; }
-.container .jumbotron .jumbotron-inner .jumbotron-subtitle { width: 23%; margin-top: 1.5rem; font-family: 'Nanum Gothic', sans-serif; word-break: keep-all; word-wrap: break-word; color: #041419; font-size: 0.7rem; line-height: 1.4rem; z-index: 5; }
-.container .jumbotron .jumbotron-inner .jumbotron-inner-image { width: 60%; height: 80%; position: absolute; top: 12%; right: 5%; overflow: hidden; }
-.container .jumbotron .jumbotron-inner .jumbotron-inner-image img { width: 100%; position: absolute; right: 0; bottom: 5%; }
-.container .jumbotron .jumbotron-num { position: absolute; font-family: 'Libre Baskerville', serif; font-size: 0.9rem; font-weight: bold; color: #041419; right: 10.3%; top: 53%; }
+.container .services-main { margin-top: 8rem; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 17%; display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; }
+.container .services-main .services-main__content { width: 30%; margin-left: 70%; margin-top: 7%; }
+.container .services-main .services-main__content .content-tab-list { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; }
+.container .services-main .services-main__content .content-tab-list .content-tab { width: 100%; height: 3rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; border-bottom: 1px solid #9e987d; margin-top: 1rem; position: relative; cursor: pointer; }
+.container .services-main .services-main__content .content-tab-list .content-tab:hover .content-tab__arrow span { -webkit-animation: ltr 1s ease infinite; animation: ltr 1s ease infinite; }
+.container .services-main .services-main__content .content-tab-list .content-tab .content-tab__num { font-size: 0.7rem; font-family: 'Poppins', sans-serif; font-weight: 900; color: #9e987d; margin-right: 0.5rem; }
+.container .services-main .services-main__content .content-tab-list .content-tab .content-tab__title { font-size: 0.7rem; font-family: 'Spoqa Han Sans', 'Sans-serif'; color: #9e987d; margin-right: 0.5rem; }
+.container .services-main .services-main__content .content-tab-list .content-tab .content-tab__arrow { width: 3rem; height: 3rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; position: absolute; right: 0; }
+.container .services-main .services-main__content .content-tab-list .content-tab .content-tab__arrow span { width: 0.6rem; height: 0.6rem; border-top: 1px solid #9e987d; border-right: 1px solid #9e987d; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+.container .services-main .services-main__header { width: 30%; position: absolute; margin-top: 4%; }
+.container .services-main .services-main__header .main-header__border { margin-top: 2rem; width: 100%; height: 3px; background-color: #041419; }
+.container .services-main .services-main__header .main-header__border.short { width: 50%; }
+.container .services-main .services-main__header .main-header__title { font-family: 'Prata', serif; font-size: 3rem; color: #041419; margin-top: 2rem; }
+.container .services-main .services-main__header .main-header__subtitle { margin-top: 2rem; margin-bottom: 2rem; font-size: 0.7rem; line-height: 1.4rem; font-family: 'Nanum Gothic', sans-serif; word-break: keep-all; word-wrap: break-word; color: #041419; width: 70%; }
+.container .services-jlc { width: 100%; height: 35vw; margin-top: 9rem; overflow: hidden; position: relative; opacity: 0.5; }
+.container .services-jlc img { position: absolute; width: 100%; top: 0; }
 .container .content { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
 .container .content .content-wrapper { width: 100%; padding: 0 17%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.container .content .content-wrapper .services__header { margin-top: 5rem; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; position: relative; }
-.container .content .content-wrapper .services__header .services__subtitle { font-family: 'Poppins', sans-serif; font-size: 0.8rem; text-align: center; color: #9e987d; }
-.container .content .content-wrapper .services__header .services__title { font-family: 'Nanum Gothic', sans-serif; font-size: 1.5rem; line-height: 1.9rem; text-align: center; margin-top: 0.4rem; position: relative; color: #041419; font-weight: bold; }
-.container .content .content-wrapper .services__header .services__title:after { content: ''; width: 100%; position: absolute; height: 0.2rem; background-color: #9e987d; display: block; margin-top: 0.8rem; }
-.container .content .content-wrapper .services__header .services__title-deco { width: 0.5rem; height: 0.5rem; border-radius: 0.5rem; border: 1px solid #9e987d; background-color: #041419; position: absolute; bottom: -1.2rem; }
-.container .content .content-wrapper .services__desc { width: 50%; text-align: center; font-size: 0.7rem; line-height: 1.4rem; color: #041419; margin-top: 3rem; word-break: keep-all; word-wrap: break-word; }
+.container .content .content-wrapper .services__header { margin-top: 5rem; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: flex-start; -moz-align-items: flex-start; -ms-align-items: flex-start; align-items: flex-start; position: relative; }
+.container .content .content-wrapper .services__header .services__border { margin-top: 2rem; width: 100%; height: 2px; background-color: #041419; }
+.container .content .content-wrapper .services__header .services__border.short { width: calc(96% / 3); }
+.container .content .content-wrapper .services__header .services__title { margin-top: 2rem; font-family: 'Spoqa Han Sans', 'Sans-serif'; font-size: 1.2rem; line-height: 1.8rem; position: relative; color: #041419; font-weight: bold; }
+.container .content .content-wrapper .services__desc { width: 43%; font-size: 0.7rem; line-height: 1.4rem; color: #041419; word-break: keep-all; word-wrap: break-word; position: absolute; margin-left: 11%; margin-top: 9rem; }
 .container .content .content-wrapper .service-wrapper { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; }
 .container .content .content-wrapper .service-wrapper .service { margin-top: 3rem; font-family: 'Nanum Gothic', sans-serif; width: calc(96% / 3); margin-left: 2%; }
 .container .content .content-wrapper .service-wrapper .service:nth-of-type(1) { margin-left: 0; }
