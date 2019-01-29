@@ -23,73 +23,88 @@ body {
 	width: 100%;
 	position: relative;
 	margin-top: -8rem;
-	.jumbotron {
-		position: relative;
+	.boutique-main {
+		margin-top: 8rem;
 		width: 100%;
-		height: 83vh;
-		overflow: hidden;
+		@include box-sizing(border-box);
+		padding: 0 17%;
 		@include flexbox();
-		@include justify-content(center);
-		@include align-items(center);
-		background-image: url('../../images/boutiques/boutique-1.jpg');
-		background-size: cover;
-		background-repeat: no-repeat;
-		.jumbotron-inner {
-			margin-top: 4rem;
-			width: 70%;
-			height: 65%;
-			border: 3px solid $main-color1;
-			padding: 0 6.5%;
-			@include box-sizing(border-box);
-			@include flexbox();
-			@include flex-direction(column);
-			@include justify-content(center);
-			position: relative;
-			.jumbotron-indicator {
-				width: 14rem;
-				height: 0.5rem;
-				background-color: $main-color1;
-				margin-left: -19%;
-			}
-			.jumbotron-title {
-				margin-top: 1.3rem;
-				font-family: 'Libre Baskerville', serif;
-				font-size: 3rem;
-				line-height: 3.6rem;
-				word-break: keep-all;
-				word-wrap: break-word;
-				color: $main-color1;
-			}
-			.jumbotron-subtitle {
-				width: 23%;
-				margin-top: 1.5rem;
-				font-family: 'Nanum Gothic', sans-serif;
-				word-break: keep-all;
-				word-wrap: break-word;
-				color: $main-color1;
-				font-size: 0.7rem;
-				line-height: 1.4rem;				
-			}
-			.jumbotron-inner-image {
-				width: 55%;
-				height: 80%;
-				position: absolute;
-				top: 10%;
-				right: 5%;
+		position: relative;
+		.boutique-main__content {
+			width: 60%;
+			margin-left: 40%;
+			.main-content__image {
+				width: 100%;
+				height: 25vw;
 				overflow: hidden;
+				@include flexbox();
+				@include justify-content(center);
+				@include align-items(center);
 				img {
 					width: 100%;
 				}
 			}
-		}		
-		.jumbotron-num {
+			.main-content__text {
+				width: 100%;
+				position: relative;
+				.main-content__text-desc {
+					width: 75%;
+					font-size: 0.85rem;
+					line-height: 1.7rem;
+					font-family: 'Nanum Gothic', sans-serif;
+					word-break: keep-all;
+					word-wrap: break-word;
+					color: $main-color1;
+					text-align: left;
+					margin-top: 2rem;
+					@include box-sizing(border-box);
+					padding-left: 5%;
+					z-index: 5;
+					position: relative;
+				}
+				.main-content__text-year {
+					font-family: 'Poppins', sans-serif;
+					font-size: 6rem;
+					font-weight: 900;
+					color: $font-pale-gray;
+					width: 100%;
+					text-align: right;
+					position: absolute;
+					right: 0;
+					top: -2rem;
+				}
+			}
+		}
+		.boutique-main__header {
+			width: 30%;
 			position: absolute;
-			font-family: 'Libre Baskerville', serif;
-			font-size: 0.9rem;
-			font-weight: bold;
-			color: $main-color1;
-			right: 10.3%;
-			top: 53%;
+			margin-top: 4%;
+			.main-header__border {
+				margin-top: 2rem;
+				width: 100%;
+				height: 3px;
+				background-color: $main-color1;
+				&.short {
+					width: 50%;
+				}
+			}
+			.main-header__title {
+				font-family: 'Prata', serif;
+				font-size: 3rem;
+				color: $main-color1;
+				margin-top: 2rem;
+			}
+			.main-header__subtitle {
+				margin-top: 2rem;
+				margin-bottom: 2rem;
+				font-size: 0.7rem;
+				line-height: 1.4rem;
+				font-family: 'Nanum Gothic', sans-serif;
+				word-break: keep-all;
+				word-wrap: break-word;
+				color: $main-color1;
+				width: 70%;
+			}
 		}
 	}
 	.content {

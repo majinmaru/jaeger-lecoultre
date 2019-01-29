@@ -34,19 +34,19 @@ body {
 
 .container {
 	width: 100%;
-	min-width: 811px;
 	position: relative;
 	margin-top: -8rem;
 	.history-main {
-		margin-top: 12rem;
-		width: 66%;
+		margin-top: 8rem;
+		width: 100%;
 		@include box-sizing(border-box);
-		margin: 0 17%;
+		padding: 0 17%;
 		@include flexbox();
 		position: relative;
 		.history-main__content {
 			width: 60%;
 			margin-left: 40%;
+			margin-top: 15%;
 			.main-content__image {
 				width: 100%;
 				height: 20vw;
@@ -91,7 +91,7 @@ body {
 			}
 		}
 		.history-main__header {
-			width: 35%;
+			width: 30%;
 			position: absolute;
 			.main-header__border {
 				margin-top: 2rem;
@@ -229,16 +229,148 @@ body {
 	}
 	
 }
-@media screen and (min-width: 811px) {
+@media screen and (min-width: 811px) and (max-width: 1024px){
 	.container {
 		.history-main {
-			min-width: 811px;
 			margin: 12rem auto 0 auto;
 		}
 	}
 }
 @media screen and (min-width: 320px) and (max-width: 810px) {
 	.container {
-
+		.history-main {
+			margin: 10rem auto 0 auto;
+			padding: 0 7%;
+			.history-main__content {
+				width: 80%;
+				margin-left: 20%;
+				margin-top: 54%;
+				.main-content__image {
+					height: 35vw;
+					img {
+						width: 100%;
+					}
+				}
+				.main-content__text {
+					width: 100%;
+					position: relative;
+					.main-content__text-desc {
+						width: 95%;
+						font-size: 0.7rem;
+						line-height: 1.4rem;
+						margin-top: 2rem;
+						@include box-sizing(border-box);
+						padding-left: 0;
+						z-index: 5;
+						position: relative;
+					}
+					.main-content__text-year {
+						font-size: 3rem;
+						top: 2rem;
+						color: $main-color2;
+					}
+				}
+			}
+			.history-main__header {
+				width: 86%;
+				position: absolute;
+				.main-header__border {
+					margin-top: 1rem;
+					&.short {
+						width: 35%;
+					}
+				}
+				.main-header__title {
+					font-size: 2rem;
+					margin-top: 1rem;
+				}
+				.main-header__subtitle {
+					position: absolute;
+					right: 0;
+					font-size: 0.6rem;
+					line-height: 1.2rem;
+					width: 60%;
+					top: 28%;
+					margin-top: 0;
+					margin-bottom: 0;
+					width: 55%;
+				}
+			}
+		}
+		.history-content {
+			width: 100%;
+			padding: 0 7%;
+			margin-top: 6rem;
+			.history-content__card {
+				margin-bottom: 80%;
+				width: 100%;
+				height: 20vw;
+				position: relative;
+				@include flexbox();
+				background-color: transparent;	
+				.card-image {
+					width: 80%;
+					height: 35vw;
+					img {
+						width: 100%;
+						opacity: 0.85;
+					}
+					&.right {
+						right: 0;
+					}
+					&.left {
+						left: 0;
+					}
+				}
+				.card-text {
+					position: absolute;
+					width: 100%;
+					top: 105%;
+					&.left{
+						left: 0;
+					}
+					&.right {
+						right: 0;
+						.card-text__desc {
+							padding-left: 15%;
+							padding-right: 5%;
+							text-align: right;
+						}
+						.card-text__border {
+							margin-left: 70%;
+						}
+						.card-text__year {
+							text-align: left;
+						}
+					}
+					.card-text__border {
+						width: 30%;
+						height: 2px;
+						margin-top: 2.5rem;
+					}
+					.card-text__desc {
+						width: 100%;
+						font-size: 0.7rem;
+						line-height: 1.4rem;
+						padding-left: 5%;
+						padding-right: 15%;
+						z-index: 5;
+						position: absolute;
+					}
+					.card-text__year {						
+						font-size: 3rem;
+						color: $main-color2;
+						top: -7rem;
+					}
+				}
+			}
+		}
+		.gototop {
+			padding: 0.8rem 4.5rem;
+			font-size: 0.65rem;
+			color: $main-color2;
+			width: 80%;
+			margin-left: 10%;
+		}
 	}
 }

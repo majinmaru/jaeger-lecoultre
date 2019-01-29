@@ -382,6 +382,7 @@ body {
 			                        -webkit-box-orient: vertical;
 									word-break: keep-all;
 									word-wrap: break-word;
+									text-overflow: ellipsis;
 									font-family: 'Nanum Gothic', sans-serif;
 								}
 								.issues-info {
@@ -544,10 +545,8 @@ body {
 									opacity: 1;
 								}
 								.issues-box-deco-one {
-									opacity: 1;
 								}
 								.issues-box-deco-two {
-									opacity: 1;
 								}
 							}
 							.issues-box-bg {
@@ -629,19 +628,23 @@ body {
 }
 @media screen and (min-width: 320px) and (max-width: 810px) {
 	.container {
+		overflow-x: hidden;
 		.issues-main {
 			margin-top: 10rem;
 			padding: 0 5%;
-			height: 80vw;		
+			height: 80vw;	
 			.issues-main-wrapper {
 				.main-image {
 					height: 80vw;				
 					.main-image__bg {						
 					}
 					.main-image__front {
-					width: 116%;
-					height: 80vw;					
+						width: 100%;
+						height: 80vw;
+						left: 15%;				
 						img {
+							position: absolute;
+							left: 0;
 						}
 					}
 				}
@@ -685,7 +688,8 @@ body {
 		}
 		.content {
 			.content-wrapper {					
-				.tab-box {				
+				.tab-box {
+					margin-top: 10rem;		
 					.tab-box__header {						
 						.tab-box__title {
 							font-size: 1.5rem;
@@ -713,9 +717,8 @@ body {
 							}
 							&.show {
 								.issues-box-wrapper {
-									@include animation(appear 0.5s ease);
-									@include box-shadow(0 10px 30px $box-shadow);
-									opacity: 1;
+									width: 72%;
+									margin: 0 14%;
 								}
 								.issues-box-deco-one {
 									opacity: 1;
@@ -728,12 +731,12 @@ body {
 							}
 							.issues-box-deco-one {
 								width: 95vw;
-								left: -35%;
+								left: -39%;
 								bottom: 49%;
 							}
 							.issues-box-deco-two {
 								top: 14%;
-								right: 2%;						
+								right: -1%;						
 							}
 							.issues-box-wrapper {
 								height: 95vw;
@@ -747,8 +750,8 @@ body {
 								.issues-content {
 									width: 100%;
 									height: 60vw;
-									padding-left: 7%;
-									padding-right: 7%;
+									padding-left: 9%;
+									padding-right: 9%;
 									border: none;
 									.issues-header {
 										width: 100%;
@@ -757,6 +760,15 @@ body {
 										.issues-header__title {
 											width: 100%;
 											font-size: 0.95rem;
+											word-wrap: break-word;
+											line-height: 1.3rem;
+											height: 2.6rem;
+											overflow: hidden;
+					                        -webkit-line-clamp: 2;
+					                        text-overflow: ellipsis;
+					                        white-space: normal;
+					                        display: -webkit-box;
+					                        -webkit-box-orient: vertical;
 											&:after {
 												width: 100%;
 											}																			
@@ -778,10 +790,10 @@ body {
 										font-size: 0.7rem;
 										line-height: 1.3rem;
 										height: 3.9rem;
-				                        -webkit-line-clamp: 3;								
+				                        -webkit-line-clamp: 3;							
 									}
 									.issues-info {
-										margin-top: 1.2rem;									
+										margin-top: 1.5rem;									
 										width: 100%;
 										.issues-info__date {
 											.date-icon {
