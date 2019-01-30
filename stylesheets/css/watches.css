@@ -132,15 +132,15 @@ body { width: 100%; overflow-x: hidden; background-color: #f2f2f2; }
   .container .watches-content .watch .watch-header .watch-header__title { font-size: 1.2rem; margin-top: 0.3rem; }
   .container .watches-content .watch .watch-header .watch-header__border { width: 78%; margin-top: 1rem; margin-left: 22%; }
   .container .watches-content .watch .watch-body { width: 100%; margin-top: 2rem; height: 133vw; }
-  .container .watches-content .watch .watch-body .watch-body__text { width: 100%; margin-top: 71%; }
+  .container .watches-content .watch .watch-body .watch-body__text { width: 100%; margin-top: 90%; }
   .container .watches-content .watch .watch-body .watch-body__text .body-text__content { width: 95%; font-size: 0.6rem; line-height: 1.2rem; }
   .container .watches-content .watch .watch-body .watch-body__images { width: 75%; left: 25%; }
-  .container .watches-content .watch .watch-body .watch-body__images .body__image-wrapper .body-image { height: 53vw; }
+  .container .watches-content .watch .watch-body .watch-body__images .body__image-wrapper .body-image { height: 70vw; }
   .container .watches-content .watch .watch-body .watch-body__images .body__image-wrapper .body-image:hover .image-hover { top: 0; }
   .container .watches-content .watch .watch-body .watch-body__images .body__image-wrapper .body-image span { bottom: 15%; font-size: 0.7rem; }
-  .container .watches-content .watch .watch-body .watch-body__images .body__image-wrapper .body-image.one { width: 48%; }
+  .container .watches-content .watch .watch-body .watch-body__images .body__image-wrapper .body-image.one { width: 60%; }
   .container .watches-content .watch .watch-body .watch-body__images .body__image-wrapper .body-image.one p { font-size: 1.5rem; }
-  .container .watches-content .watch .watch-body .watch-body__images .body__image-wrapper .body-image.two { width: 100%; }
+  .container .watches-content .watch .watch-body .watch-body__images .body__image-wrapper .body-image.two { width: 110%; }
   .container .watches-content .watch .watch-body .watch-body__images .body__image-wrapper .body-image.three { width: 75%; }
   .container .watches-content .watch .watch-body .watch-body__images .body__image-wrapper .body-image.four { width: 100%; }
   .container .watches-content .watch .watch-bottom-border { margin-top: 3rem; }
