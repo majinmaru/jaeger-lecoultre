@@ -28,6 +28,7 @@ $(document).ready(function(){
     zIndex: 1,
     pauseOnHover: false
   });
+
 /*
   function listAppear(){
   	var sectionTwoTop = $(".two").offset().top;
