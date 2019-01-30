@@ -67,19 +67,19 @@ body { width: 100%; overflow-x: hidden; background-color: #f2f2f2; }
   .container .manufacture-main .manufacture-main__header .main-header__title { font-size: 2rem; margin-top: 1rem; }
   .container .manufacture-main .manufacture-main__header .main-header__subtitle { margin-top: 1rem; margin-bottom: 0; font-size: 0.6rem; line-height: 1.2rem; width: 80%; }
   .container .manufacture-content { margin-top: 16rem; padding: 0 7%; }
-  .container .manufacture-content .manufacture-content__card { margin-bottom: 20rem; width: 100%; height: 39vw; }
+  .container .manufacture-content .manufacture-content__card { margin-bottom: 5rem; width: 100%; height: unset; }
   .container .manufacture-content .manufacture-content__card .card-image { width: 65%; height: 39vw; position: absolute; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; background-color: #ffffff; overflow: hidden; -webkit-box-shadow: 5px 7px 12px rgba(51, 51, 51, 0.25); -moz-box-shadow: 5px 7px 12px rgba(51, 51, 51, 0.25); box-shadow: 5px 7px 12px rgba(51, 51, 51, 0.25); }
   .container .manufacture-content .manufacture-content__card .card-image.right { right: 0; }
   .container .manufacture-content .manufacture-content__card .card-image.left { left: 0; }
-  .container .manufacture-content .manufacture-content__card .card-text { position: absolute; width: 100%; }
+  .container .manufacture-content .manufacture-content__card .card-text { position: relative; width: 100%; }
   .container .manufacture-content .manufacture-content__card .card-text.left { left: 0; }
   .container .manufacture-content .manufacture-content__card .card-text.right { right: 0; }
   .container .manufacture-content .manufacture-content__card .card-text.right .card-text__border { margin-left: 57%; }
   .container .manufacture-content .manufacture-content__card .card-text.right .card-text__title { text-align: right; margin-left: 65%; padding-left: 0; }
   .container .manufacture-content .manufacture-content__card .card-text.right .card-text__desc { padding-left: 5%; padding-right: 5%; text-align: right; }
   .container .manufacture-content .manufacture-content__card .card-text .card-text__border { width: 43%; margin-top: 0.5rem; }
-  .container .manufacture-content .manufacture-content__card .card-text .card-text__desc { font-size: 0.65rem; line-height: 1.3rem; text-align: left; margin-top: 5rem; padding-left: 5%; padding-right: 5%; }
+  .container .manufacture-content .manufacture-content__card .card-text .card-text__desc { font-size: 0.65rem; line-height: 1.3rem; text-align: left; margin-top: 5rem; padding-left: 5%; padding-right: 5%; position: relative; }
   .container .manufacture-content .manufacture-content__card .card-text .card-text__title { font-size: 1rem; width: 30%; text-align: left; padding-left: 5%; margin-top: 4rem; }
-  .container .gototop { padding: 0.8rem 4.5rem; font-size: 0.85rem; font-family: 'Nanum Gothic', sans-serif; border: 1px solid #9e987d; color: #9e987d; cursor: pointer; background-color: transparent; outline: none; } }
+  .container .gototop { padding: 0.8rem 4.5rem; font-size: 0.7rem; } }
 
 /*# sourceMappingURL=manufacture.css.map */
