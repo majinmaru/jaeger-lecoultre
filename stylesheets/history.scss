@@ -38,7 +38,7 @@ body {
 	position: relative;
 	margin-top: -8rem;
 	.history-main {
-		margin-top: 8rem;
+		margin-top: 10rem;
 		width: 100%;
 		@include box-sizing(border-box);
 		padding: 0 17%;
@@ -125,6 +125,7 @@ body {
 	.history-jlc {
 		width: 100%;
 		margin-top: 3rem;
+		overflow: hidden;
 		img {
 			width: 100%;
 		}

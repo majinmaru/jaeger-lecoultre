@@ -23,7 +23,7 @@ body { width: 100%; overflow-x: hidden; background-color: #f2f2f2; }
 .container .boutique-content { width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 17%; margin-top: 4rem; }
 .container .boutique-content .boutique-find { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
 .container .boutique-content .boutique-find .search-box { margin-top: 2rem; width: 60%; height: 3rem; border: 1px solid #041419; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; margin-bottom: 3rem; }
-.container .boutique-content .boutique-find .search-box input { width: 90%; margin-right: 5%; font-size: 1rem; font-family: 'Libre Baskerville', 'Noto Serif KR', serif; outline: none; background-color: transparent; border: none; padding-left: 5%; font-weight: bold; color: #041419; }
+.container .boutique-content .boutique-find .search-box input { width: 90%; margin-right: 5%; font-size: 1rem; font-family: 'Nanum Gothic', sans-serif; outline: none; background-color: transparent; border: none; padding-left: 5%; font-weight: bold; color: #041419; }
 .container .boutique-content .boutique-find .search-box input::-webkit-input-placeholder { color: #9e987d; }
 .container .boutique-content .boutique-find .search-box input:-moz-placeholder { color: #9e987d; }
 .container .boutique-content .boutique-find .search-box input::-moz-placeholder { color: #9e987d; }
